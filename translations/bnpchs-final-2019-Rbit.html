@@ -1,28 +1,27 @@
 <h3>Description</h3>
 
 <p style="text-align: justify;">
-  In a 1 dimensional coordinate system, Feli has a rabbit named Rbit. Rbit likes to jump a lot. In every jump, Rbit can move to the right or move to the left.
+  In a 1 dimensional coordinate system, Feli has a rabbit named Rbit. Rbit likes to jump a lot. In every jump, Rbit can jump to the right or to the left.
 </p>
 
 <p style="text-align: justify;">
-  Every time Rbit jumps, the jump distance is reduced by 1, if compared to the previous one. If Rbit jumps a 7 long-distance from coordinate 3 to 10, then in the next one it jumps for 6 long-distance ends up in coordinate 4 or 16. As Rbit loves jumping, Rbit will keep jumping until it's jumping distance reach 0. Rbit can also jump into a negative coordinate point.
+  Every time Rbit jumps, the jump distance is reduced by 1 compared to the previous distance. If Rbit jumps with distance 7 from coordinate 3 to 10, then in the next jump, it jumps with distance 6 and ends up in either coordinate 4 or 16. As Rbit loves jumping, Rbit will keep jumping until its jumping distance reaches 0. Rbit can also jump to a negative coordinate point.
 </p>
 
 <p style="text-align: justify;">
-  Rbit lives at coordinate point 0 and wants to go outside. The only way out is at the coordinate point $$$N$$$. Help Rbit to get outside by specifying the minimum first jumping distance and the direction of every jump so that Rbit stops right at coordinate $$$N$$$. If Rbit can't go outside output "-1" instead.
+  Rbit lives at coordinate point 0 and wants to go outside. The only way out is at the coordinate point $$$N$$$. Help Rbit to get outside by specifying the minimum first jumping distance and the direction of every jump so that Rbit stops right at coordinate $$$N$$$. If Rbit cannot go outside, output "-1".
 </p>
-
 
 <h3>Input Format</h3>
 
 <p style="text-align: justify;">
-  Input starts with single integer $$$T$$$, the number of test cases in the input. The next $$$T$$$ lines contain a single integer $$$N$$$ with $$$N$$$ is the coordinate position to be achieved.
+  Input starts with a single integer $$$T$$$, the number of test cases. The next $$$T$$$ lines contain a single positive integer $$$N$$$ where $$$N$$$ is the coordinate position to be achieved.
 </p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  For each test case, if Rbit can go outside output "Case #$$$X$$$: $$$Y$$$ $$$S$$$" where $$$X$$$ is the case number (starting from 1). $$$Y$$$ is the minimum jumping distance of Rbit, and $$$S$$$ is a $$$Y$$$ length string that tells the direction of every jump ($$$S<sub>i</sub>$$$ contains "+" if Rbit jumps to the right at $$$i$$$-th jump or "-" if-else). If there're more than one way to achieve the goal, output one of it. If Rbit can't get outside output "Case #$$$X$$$: -1" instead.
+  For each test case, if Rbit can go outside output "Case #$$$X$$$: $$$Y$$$ $$$S$$$" where $$$X$$$ is the case number, starting from 1, $$$Y$$$ is the minimum jumping distance of Rbit, and $$$S$$$ is a string of length $$$Y$$$ that represents the direction of every jump ($$$S_i$$$ contains "+" if Rbit jumps to the right at the $$$i$$$-th jump, or "-" otherwise). If there is more than one way to achieve the goal, output any of it. If Rbit can't get outside output "Case #$$$X$$$: -1" instead.
 </p>
 
 
@@ -30,7 +29,7 @@
 
 <ul>
   <li style="text-align: justify;">$$$1 &le; T &le; 100$$$.</li>
-  <li style="text-align: justify;">$$$1 &le; N &le; 10<sup>6</sup>$$$.</li>
+  <li style="text-align: justify;">$$$1 &le; N &le; 10^6$$$.</li>
 </ul>
 
 
@@ -54,5 +53,5 @@ Case #3: 3 ++-
 <h3>Explanation</h3>
 
 <p style="text-align: justify;">
-  In the third case, Rbit can jump 3 to the right, 2 to the right and lastly 1 to the left to reach position 4.
+  In the third case, Rbit can jump 3 to the right, 2 to the right, and lastly 1 to the left to reach position 4.
 </p>
