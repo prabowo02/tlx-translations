@@ -1,0 +1,107 @@
+<style>
+  table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Feli is a resident of the Beenus kingdom that has $$$N$$$ legs. One day, the Beenus kingdom will hold a lively party. All of the resident of Beenus is invited, including Feli. To respect the party's owner, everyone should wear a polite and descent clothe.
+</p>
+
+<p style="text-align: justify">
+  Feli wants to wear a polite and descent clothe that consists of $$$N$$$ pants, $$$N$$$ socks and $$$N$$$ shoes with the following rules:
+</p>
+
+<ul>
+  <li>Shoes can be worn on the <em>i</em>-th foot if and only if a pant and a sock have been worn on the <em>i</em>-th foot</li>
+  <li>Feli is able to change the order of wearing clothes according to her heart but she still has to follow the rules</li>
+</ul>
+
+<p style="text-align: justify;">
+  When the party started, Feli suddenly has a question "How many ways are there to wear pants, socks and shoes if she still has to follow the rules above". Help Feli to answer that question. Because the answer can be very large, Feli wants the answer modulo $$$M$$$.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  Input starts from a positive variable $$$T$$$ denoting the number of cases. T lines after it consists of two positive variables $$$N$$$ and $$$M$$$ where $$$N$$$ denotes the amount of Feli's legs and $$$M$$$ denotes the divider.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For every case, output "Case #$$$X$$$: $$$Y$$$" where $$$X$$$ denotes the case number starting from 1 and $$$Y$$$ denotes the answer according to the description.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+3
+1 5
+2 101
+2 50
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+Case #1: 2
+Case #2: 80
+Case #3: 30
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  Some possible ways for case 2 are:
+  <table style="width:40%;border: 1px solid black;" >
+    <tr>
+      <th></th>
+      <th>Pant 1</th>
+      <th>Sock 1</th>
+      <th>Shoe 1</th>
+      <th>Pant 2</th>
+      <th>Sock 2</th>
+      <th>Shoe 2</th>
+    </tr>
+    <tr>
+      <td>Way 1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4</td>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Way 2</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+      <td>3</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Way 3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
+  The numbers on the table denotes the sequence of wearing.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+  <li style="text-align: justify;">$$$1 &le; T &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$1 &le; N &le; 10^{5}$$$.</li>
+  <li style="text-align: justify;">$$$1 < M &le; 2 \times 10^{9}$$$.</li>
+</ul>
