@@ -1,16 +1,3 @@
-<head>
-  <script>
-    window.MathJax = {
-      tex: {
-      inlineMath: [['$$$', '$$$'], ['\\(', '\\)']]
-      }
-    };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-</head>
-
 <style>
   table, th, td{
   border: 1px solid black;
@@ -21,7 +8,7 @@
 <h3>Description</h3>
 
 <p style="text-align: justify;">
-  Feli is a resident of the Beenus kingdom that has $$$N$$$ legs. One day, the Beenus kingdom will hold a lively party. All of the resident of Beenus is invited, including Feli. To respect the party's owner, everyone should wear a polite and descent clothes.
+  Feli is a resident of the Beenus kingdom that has $$$N$$$ legs. One day, the Beenus kingdom will hold a lively party. All of the resident of Beenus is invited, including Feli. To respect the party's owner, everyone should wear a polite and descent clothe.
 </p>
 
 <p style="text-align: justify">
@@ -34,14 +21,14 @@
 </ul>
 
 <p style="text-align: justify;">
-  When the part started, Feli suddenly has a question "How many ways are there to wear pants, socks and shoes if she still has to follow the rules above". Help Feli to answer that question. Because the answer can be very large, Feli wants the answer modulo $$$M$$$.
+  When the party started, Feli suddenly has a question "How many ways are there to wear pants, socks and shoes if she still has to follow the rules above". Help Feli to answer that question. Because the answer can be very large, Feli wants the answer modulo $$$M$$$.
 </p>
 
 <h3>Input Format</h3>
 
-<pre>
+<p>
   Input starts from a positive variable $$$T$$$ denoting the number of cases. T lines after it consists of two positive variables $$$N$$$ and $$$M$$$ where $$$N$$$ denotes the amount of Feli's legs and $$$M$$$ denotes the divider.
-</pre>
+</p>
 
 <h3>Output Format</h3>
 
@@ -69,7 +56,8 @@ Case #3: 30
 <h3>Explanation</h3>
 
 <p style="text-align: justify;">
-  <table style="width:100%;border: 1px solid black;" >
+  Some possible ways for case 2 are:
+  <table style="width:40%;border: 1px solid black;" >
     <tr>
       <th></th>
       <th>Pant 1</th>
@@ -88,10 +76,32 @@ Case #3: 30
       <td>2</td>
       <td>5</td>
     </tr>
+    <tr>
+      <td>Way 2</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+      <td>3</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Way 3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
+  The numbers on the table denotes the sequence of wearing.
 </p>
 
 <h3>Constraints</h3>
 
 <ul>
-  <li style="text-align: justify;">$$$1 &le; A, X &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$1 &le; T &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$1 &le; N &le; 10^{5}$$$.</li>
+  <li style="text-align: justify;">$$$1 < M &le; 2 \times 10^{9}$$$.</li>
 </ul>
