@@ -1,0 +1,70 @@
+<!-- Title: Study Session-->
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Feli is a college student who recently took a part-time job as a teacher. In this part-time job, Feli has a task to teach and improve the grade of $$$N$$$ students. Initially, the $$$i$$$-th student has an academic grade of $$$X_i$$$. To finish his assignment, Feli must make each student's academic grade to $$$M$$$.
+</p>
+
+<p style="text-align: justify;">
+  In a single study session, Feli can teach multiple students at once, and every student who attends the session gets it's academic grade increases by one. If the grade of a student reaches $$$M$$$, then the student feels that he/she has mastered the lesson and won't attend the study session again. 
+</p>
+
+<p style="text-align: justify;">
+  The friendship of the students is very close, in a study session where student $$$L$$$-th and $$$R$$$-th attend the session, every student with index between $$$L$$$ and $$$R$$$(inclusive) must come too. 
+</p>
+
+<p style="text-align: justify;">
+  Help Feli by telling her the minimum study session needed to finish the task, so that she can return to her holiday as soon as possible.
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with a single integer $$$T$$$, the number of test cases. The next $$$2T$$$ lines contain the description of test cases.
+</p>
+<p style="text-align: justify;">
+  The first line of description contains 2 positive integer $$$N$$$ and $$$M$$$, where $$$N$$$ is the number of students in a study session and $$$M$$$ is the grade every student must reach.
+</p>
+<p style="text-align: justify;">
+  The second line contains $$$N$$$ integers $$$X_i$$, where $$$X_i$$$ is the initial grade of the $$$i$$$-th student.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output "Case #$$$X$$$: $$$Y$$$", where $$$X$$$ is the case number (starting from $$$1$$$), and $$$Y$$$ is the minimum study session needed to finish Feli's task.
+</p>
+
+
+<h3>Constraints</h3>
+
+<ul>
+  <li style="text-align: justify;">$$$1 \le T \le 100$$$.</li>
+  <li style="text-align: justify;">$$$1 \le N \le 10^5$$$.</li>
+  <li style="text-align: justify;">$$$0 \le M \le 10^5$$$.</li>
+  <li style="text-align: justify;">For each $$$1 \le X_i \le N$$$, 0 \le X_i \le M$$$.</li>
+</ul>
+
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+5 5
+4 3 2 3 4
+5 5
+4 4 5 4 3
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Case #1: 3
+Case #2: 3
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  For the second case, we cannot select the first and fifth student as $$$L$$$ and $$$R$$$, because the third student's grade had reached $$$M$$$.
+</p>
