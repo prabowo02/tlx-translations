@@ -1,0 +1,76 @@
+<!-- Title: Es Kepal Moli -->
+<h3>Description</h3>
+<p style="text-align: justify;">
+  Jelix is a fan of a beverage called <em>es kepal moli</em>. Right now, he has $$$3N$$$ <em>es
+  kepal moli</em> arranged from left to right. Each <em>es kepal moli</em> has a different level of
+  tastiness. Let the level of tastiness be represented as $$$a_1, a_2, ..., a_{3N}$$$.
+</p>
+<p style="text-align: justify;">
+  Because he is generous, Jelix wants to share those <em>es kepal moli</em> to:
+</p>
+<p style="text-align: justify;">
+  1. Beggar<br>
+  First, Jelix picks any $$$N$$$ <em>es kepal moli</em> to be given to a beggar.
+</p>
+<p style="text-align: justify;">
+  2. Fingga<br>
+  Then, Jelix picks $$$N$$$ right-most <em>es kepal moli</em> (that has not been given to the
+  beggar) to be shared with his friend Fingga.
+</p>
+<p style="text-align: justify;">
+  3. Jelix<br>
+  After that, $$$N$$$ remaining <em>es kepal moli</em> are kept for himself.
+</p>
+<p style="text-align: justify;">
+  Jelix wants the value of the sum of level of tastiness of his <em>es kepal moli</em>
+  subtracted by that of Jingga's to be <b>MAXIMIZED</b>. Determine the maximal value that Jelix
+  can obtain.
+</p>
+
+<h3>Input Format</h3>
+<p style="text-align: justify;">
+  Input starts with a positive integer $$$T$$$ ($$$1 &le; T &le; 100$$$) that determines the
+  number of test cases. Each test case consists of two lines.
+</p>
+<p style="text-align: justify;">
+  The first line consists of one positive integer $$$N$$$ ($$$1 &le; N &le; 100000$$$).
+</p>
+<p style="text-align: justify;">
+  The next line consists of $$$3N$$$ positive integers separated by spaces which determine $$$a_1,
+  a_2, ..., a_{3N}$$$ ($$$1 &le; a_i &le; 10^9$$$).
+</p>
+
+<h3>Output Format</h3>
+<p style="text-align: justify;">
+  For each test case, output "Kasus #$$$X$$$: $$$Y$$$". $$$X$$$ represents the case number
+  (starting from 1), and $$$Y$$$ represents the maximum difference between Jelix's sum of level of
+  tastiness and Fingga's sum of tastiness.
+</p>
+
+<h3>Sample Input</h3>
+<pre>
+2
+3
+8 2 2 7 4 6 5 3 8
+1
+1 2 3
+</pre>
+
+<h3>Sample Output</h3>
+<pre>
+Kasus #1: 5
+Kasus #2: -1
+</pre>
+
+<h3>Explanation</h3>
+<p>
+  For the first test case, Jelix shares his <em>es kepal moli</em> as follows:
+</p>
+<ul>
+  <li>Gives 2, 2, and 8 <em>es kepal moli</em> to the beggar,</li>
+  <li>Shares 6, 5, and 3 <em>es kepal moli</em> to Fingga,</li>
+  <li>Takes 8, 7, and 4 <em>es kepal moli</em> for himself.</li>
+</ul>
+<p>
+  Hence, the difference is (8+7+4) - (6+5+3) = 5.
+</p>
