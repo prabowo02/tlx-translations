@@ -1,0 +1,83 @@
+<!-- Title : Housing Hunt -->
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Feli is a university student looking for a place to stay. The city where Feli lives in is made up of $$$N$$$ intersections connected by $$$N - 1$$$ roads. It is guaranteed that every pair of intersections are connected directly or indirectly through multiple roads.
+</p>
+
+<p style="text-align: justify;">
+  Feli, an active university student, often visits $$$M$$$ meeting spots. Feli surely wants to stay in a place that minimizes the furthest distance from that place to any of the $$$M$$$ spots. The distance traveled by Feli is the number of intersections that are passed.
+</p>
+
+<p style="text-align: justify;">
+  Luckily, each intersection has a place that Feli could stay in. Feli can only choose one place to stay in. Help Feli determine where she will stay.
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $$$T$$$ — the number of test cases. <br>
+  Each test case starts with two integers $$$N$$$ and $$$M$$$, where $$$N$$$ is the number of intersections and $$$M$$$ is the number of meeting spots. <br>
+  The next $$$N - 1$$$ lines, each contains two integers $$$U$$$ and $$$V$$$, indicating a road between intersection $$$U$$$ and intersection $$$V$$$. <br>
+  The next line contains $$$M$$$ integers, which are a list of intersections that is one of Feli's meeting spots.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output "Case #$$$X$$$: $$$Y$$$ $$$Z$$$", where $$$X$$$ is the case number (starting from $$$1$$$), $$$Y$$$ is the intersection number where Feli stays, and $$$Z$$$ is the furthest distance from Feli's location to any of the $$$M$$$ spots.
+</p>
+
+<p style="text-align: justify;">
+  If there are multiple intersections that Feli could stay in, she would pick the lowest possible intersection number.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+  <li style="text-align: justify;">$$$1 \le T \le 5$$$.</li>
+  <li style="text-align: justify;">$$$1 \le N \le 2 \times 10^5$$$.</li>
+  <li style="text-align: justify;">$$$2 \le M \le N$$$.</li>
+  <li style="text-align: justify;">$$$1 \le U, V \le N$$$.</li>
+</ul>
+
+<h3>Sample Input</h3>
+
+<pre>
+3
+3 3
+1 2
+1 3
+1 2 3
+8 3
+1 2
+2 3
+2 4
+4 5
+5 8
+4 6
+3 7
+3 5 8
+6 2
+1 2
+2 3
+2 4
+2 5
+4 6
+1 6
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Case #1: 1 1
+Case #2: 4 2
+Case #3: 2 2
+</pre>
+
+<h3>Explanation</h3>
+<p style="text-align: justify;">
+   For case $$$3$$$, there are two intersections that Feli could stay in, intersection $$$2$$$ or intersection $$$4$$$. She would pick intersection $$$2$$$ since that is the lowest possible intersection number.
+</p>
+ 
