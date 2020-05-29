@@ -16,88 +16,48 @@
 <h3>Description</h3>
 
 <p style="text-align: justify;">
-  Jelix has two dices each with N sides, he has an idea of a game with those two dices. On each side of the dice, there is a number between $$$1$$$ and $$$N$$$ inclusive and the numbers on each side of a dice is different. This game is played by 2 people, player one picks a number between $$$1$$$ and $$$N - 1)$$$ inclusive. Then, both players toss their dice, if the maximum number that appears on the top of both dice is smaller or equal to the number picked by the first player, then the first player wins the game. If not, then the second player wins.
+  Jelix has two dices each with $$$N$$$ sides, he has an idea of a game with those two dices. On each side of the dice, there is a number between $$$1$$$ and $$$N$$$ inclusive and the numbers on each side of a dice is different. This game is played by 2 players, player one picks a number between $$$1$$$ and ($$$N - 1)$$$ inclusive. Then, both players toss their dice, if the maximum number that appears on the top of both dice is smaller or equal to the number picked by the first player, then the first player wins the game. If not, then the second player wins.
 </p>
 
-<p>
+<p style="text-align:justify">
   After making the rules, Jelix feels like the first player will have a better chance of winning. So, Jelix will always play as the first player.
 </p>
 
-<p>
-  This time Jelix chanllenges Fing to play with him. Because Jelix and Fing are best friends, Jelix does not want Fing to feel suspicious because the numbers that Jelix choose too big and makes Fing's winning chance very low. Jelix decided to pick a number in a way that Jelix's winning rate is higher than Fing's but the difference between their winning rate must be as small as possible. For example, Jelix's winning rate is 50.05% and Fing's winning rate is 49.95%. Help Jelix decide which number he should pick.
-</p>
-
-<ul>
-  <li>one <em>maj</em> is equal to $$$A$$$ <em>netim</em>;</li>
-  <li>
-    the time format in Oivworld is $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>,
-    where $$$(0 \le M &lt; A$$$.
-  </li>
-</ul>
-
-<p style="text-align: justify;">
-  Ivo asks you, a dweller of Oivworld. If $$$X$$$ <em>netim</em> has passed, what is the time
-  format in $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>?
+<p style="text-align:justify">
+  This time Jelix challenges Fing to play with him. Because Jelix and Fing are best friends, Jelix does not want Fing to feel suspicious by picking a number that is too large and making Fing's winning chance very low. Jelix decided to pick a number in a way that Jelix's winning rate is higher than Fing's but the difference between their winning rate must be as small as possible. For example, Jelix's winning rate is 50.05% and Fing's winning rate is 49.95%. Help Jelix decide which number he should pick.
 </p>
 
 <h3>Input Format</h3>
 
-<pre>
-A X
-</pre>
+<p style="text-align:justify">
+  First line consists of an integer $$$T$$$ which denotes the number of cases. The next $$$T$$$ lines consists of an integer $$$N$$$ according to the description.
+</p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  One line containing two integers $$$N$$$ and $$$M$$$, representing the time has passed in
-  Oivworld for $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>.
+    For every case, output "Kasus #$$$X$$$: $$$Y$$$" without quotation marks where $$$X$$$ denotes the case number starting from one and $$$Y$$$ denotes the number that Jelix has to choose. If it is impossible, then $$$Y$$$ equals to "-1".
 </p>
 
 <h3>Constraints</h3>
 
 <ul>
-  <li style="text-align: justify;">$$$1 &le; A, X &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$1 &le; T &le; 100$$$.</li>
+  <li style="text-align:justify;">$$$2 &le; N &le; 10^{9}$$$.</li>
 </ul>
 
 <h3>Sample Input 1</h3>
 
 <pre>
-2 5
+2
+6
+12
 </pre>
 
 <h3>Sample Output 1</h3>
 
 <pre>
-2 1
+Kasus #1: 5
+Kasus #2: 9
 </pre>
-
-<h3>Sample Input 2</h3>
-
-<pre>
-4 20
-</pre>
-
-<h3>Sample Output 2</h3>
-
-<pre>
-5 0
-</pre>
-
-<h3>Sample Input 3</h3>
-
-<pre>
-9 6
-</pre>
-
-<h3>Sample Output 3</h3>
-
-<pre>
-0 6
-</pre>
-
-<h3>Explanation</h3>
-
-<p style="text-align: justify;">
-  In the first sample, 5 <em>netim</em> is equal to 2 <em>maj</em> and 1 <em>netim</em>.
-</p>
 
