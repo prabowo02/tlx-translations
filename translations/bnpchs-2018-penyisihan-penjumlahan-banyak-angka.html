@@ -1,83 +1,74 @@
+<head>
+  <script>
+    window.MathJax = {
+      tex: {
+      inlineMath: [['$$$', '$$$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+
 <h3>Description</h3>
 
-<p style="text-align: center;"><img src="render/jam.jpg" style="height:150px" /></p>
-
 <p style="text-align: justify;">
-  Ivo plans to make an Oivworld digital clock. Ivo knows that in Oivworld, time is not represented
-  as hours and minutes, but <em>maj</em> and <em>netim</em>. Fortunately, Ivo has a guide book about
-  the time cycle in Oivworld, which is:
+  Jelix Fingga is a math lecturer at the Panda University. One day, Jelix Fingga gives numbers from $$$A$$$ to $$$B$$$ inclusive. He asks his students to count the sum of the numbers from $$$A$$$ to $$$B$$$.
 </p>
 
-<ul>
-  <li>one <em>maj</em> is equal to $$$A$$$ <em>netim</em>;</li>
-  <li>
-    the time format in Oivworld is $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>,
-    where $$$(0 \le M &lt; A$$$.
-  </li>
-</ul>
+<p>
+  However, most of his students could not answer this question because the result can be very large. Seeing that, Jelix Fingga changed the question from counting the sum of these numbers to deciding whether the sum of the numbers from $$$A$$$ to $$$B$$$ is negative or positive.
+</p>
 
-<p style="text-align: justify;">
-  Ivo asks you, a dweller of Oivworld. If $$$X$$$ <em>netim</em> has passed, what is the time
-  format in $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>?
+<p>
+  Maxi, one of Jelix Fingga's students, cannot answer the second question and asks you to help him. You, as his best friend, should help him answer the question.
 </p>
 
 <h3>Input Format</h3>
 
-<pre>
-A X
-</pre>
+<p>
+  The first line consists of an integer $$$T$$$ which denotes the number of cases. The next $$$T$$$ lines consists of two integers $$$A$$$ and $$$B$$$ according to the description.
+</p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  One line containing two integers $$$N$$$ and $$$M$$$, representing the time has passed in
-  Oivworld for $$$N$$$ <em>maj</em> $$$M$$$ <em>netim</em>.
+  For every case, output "Kasus #$$$X$$$: $$$Y$$$" without quotation marks, where $$$X$$$ denotes the case number starting from one and $$$Y$$$ denotes the answer for that case. Output:
+  <ul>
+    <li>"Positif" without quotation marks if the answer is positive.</li>
+    <li>"Negatif" without quotation marks if the answer is negative.</li>
+    <li>"Nol" without quotation marks if the answer is zero.</li>
+  </ul>
 </p>
+
 
 <h3>Sample Input 1</h3>
 
 <pre>
-2 5
+3
+-5 6
+-5 2
+-1 1
 </pre>
 
 <h3>Sample Output 1</h3>
 
 <pre>
-2 1
-</pre>
-
-<h3>Sample Input 2</h3>
-
-<pre>
-4 20
-</pre>
-
-<h3>Sample Output 2</h3>
-
-<pre>
-5 0
-</pre>
-
-<h3>Sample Input 3</h3>
-
-<pre>
-9 6
-</pre>
-
-<h3>Sample Output 3</h3>
-
-<pre>
-0 6
+Kasus #1: Positif
+Kasus #2: Negatif
+Kasus #3: Nol
 </pre>
 
 <h3>Explanation</h3>
 
 <p style="text-align: justify;">
-  In the first sample, 5 <em>netim</em> is equal to 2 <em>maj</em> and 1 <em>netim</em>.
+  For the first case, the sum of integers from -5 to 6 is 6. Because 6 is positive, then output "Positif".
 </p>
 
 <h3>Constraints</h3>
 
 <ul>
-  <li style="text-align: justify;">$$$1 &le; A, X &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$1 &le;T &le; 100$$$.</li>
+  <li style="text-align: justify;">$$$-2^{63} + 1 &le;A &le; B &le;2^{63} + 1$$$.</li>
 </ul>
