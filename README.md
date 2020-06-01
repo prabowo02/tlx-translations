@@ -25,3 +25,7 @@ Beberapa catatan yang perlu diperhatikan:
 - Apabila Anda ingin menggunakan inline equation, gunakan `$$$`.
 - Apabila ingin menambahkan gambar, gunakan tag html `<img src="render/nama_gambar.png" />` dan tambahkan `nama_gambar.png` ke dalam pull request yang sama.
 - Nama kontributor akan ditulis pada repo ini di bagian Credits.
+
+## Credits
+
+- BNPCHS 2019 Final: [Edbert Geraldy Cangdinata](https://github.com/Berted), [Juan Carlo Vieri](https://github.com/juancarlovieri), [Maximillianus Utomo Quok](https://github.com/tzaph), [Steven Novaryo](https://github.com/stevennovaryo), [Vio Albert Ferdinand](https://github.com/VioAlbert).
