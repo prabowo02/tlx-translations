@@ -1,0 +1,90 @@
+<!-- Title : Holiday Trip -->
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  The holiday season has arrived, everyone is going on a holiday trip, including Jelix Fingga. 
+  Jelix Fingga, who lives in city $$$1$$$, decided to take a trip with his family to city $$$N$$$ using a car. 
+  There are $$$M$$$ bidirectional roads that connect the cities.
+</p>
+
+<p style="text-align: justify;">
+  On each road, there are landscapes with beauty value $$$W$$$. 
+  However, watching the same landscapes will surely be boring. 
+  Therefore, the total beauty value is the bitwise operator <b>OR</b> 
+  of each road traversed by Jelix Fingga until he reaches his destination.
+</p>
+
+<p style="text-align: justify;">
+  Formally, the total beauty value is defined as the following :
+</p>
+
+<p style="text-align: justify;">
+  $$$ {\Large \textrm{Beauty Value} = W_1 \cup W_2 \cup \dots \cup W_k} $$$
+</p>
+
+<p style="text-align: justify;">
+  Where $$$W_i$$$ refers to the beauty value of a road that is traversed by Jelix Fingga.
+</p>
+
+<p style="text-align: justify;">
+  For this trip, Jelix Fingga wants to have a memorable experience. 
+  Therefore, he wants the total beauty value when he reaches city $$$N$$$ to be $$$X$$$. 
+  However, he doesn't know if that total beauty value can be reached or not. 
+  Because he is busy preparing for the trip, he asked you, his wonderful friend, 
+  whether it is possible to reach city $$$N$$$ with the total beauty value $$$X$$$. 
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $$$T$$$ ($$$1 \le T \le 10$$$) — the number of test cases.
+</p>
+<p style="text-align: justify;">
+  Each test case starts with three integers $$$N$$$, $$$M$$$, and $$$X$$$ 
+  ($$$1 \le N \le 1000, 1 \le M \le 20000, 1 \le X \le 10^6$$$)
+  denoting the number of cities, the number of roads, and the required total beauty value respectively.
+</p>
+<p style="text-align: justify;">
+  Each of the next $$$M$$$ lines contains three integers $$$U$$$, $$$V$$$, and $$$W$$$
+  ($$$1 \le U, V \le N, 1 \le W \le 10^6$$$)
+  indicating a road between city $$$U$$$ and city $$$V$$$ with beauty value $$$W$$$
+</p>
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output "Kasus #$$$X$$$: $$$Y$$$" (without quotes), 
+  where $$$X$$$ is the case number (starting from $$$1$$$), and
+  $$$Y$$$ is either "Bisa" if it is possible to reach city $$$N$$$ with beauty value $$$X$$$ 
+  or "Tidak" if otherwise.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+4 5 13
+1 2 4
+2 4 12
+1 4 3
+4 3 1
+4 3 12
+3 3 5
+1 2 3
+2 3 4
+3 1 3
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: Bisa
+Kasus #2: Tidak
+</pre>
+
+<h3>Explanation</h3>
+<p style="text-align: justify;">
+   For case $$$1$$$, one of the possible routes is traversing through roads $$$1 - 2 - 4 - 4$$$.
+</p>
+ 
+ 
