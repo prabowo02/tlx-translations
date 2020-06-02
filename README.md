@@ -5,7 +5,7 @@
 Project ini bertujuan untuk menerjemahkan kontes-kontes lokal yang ada di TLX ke Bahasa Inggris.
 
 Semua penerjemahan akan dilakukan pada *repository* ini. \
-Apabila Anda ingin berkontribusi, harap mengikuti Cara Kerja yang ada di bawah.
+Semua orang dipersilakan untuk menambah terjemahan. Apabila Anda ingin berkontribusi, harap mengikuti Cara Kerja yang ada di bawah.
 
 ## Cara Kerja
 
