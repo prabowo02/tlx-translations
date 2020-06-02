@@ -1,0 +1,172 @@
+<!-- Title : Sightseeing in Bollyjee -->
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Bollyjee is an island nation (a nation which its whole territory is within one island 
+  and that one island is claimed by only that nation) in the Pacific. 
+  This nation is composed of $$$N$$$ cities which all have their purpose, depending
+  on the production output of that city. During the early days when Bollyjee was built,
+  the government decided to establish industrial cities along the coast of the
+  island, metropolitan cities in the center of the island (cities which are connected
+  with more than two other cities and there exist exactly $$$K$$$ metropolitan
+  cities), and the rest are commune cities (places where the citizens live).
+</p>
+
+<p style="text-align: center;">
+  <img src="render/tamasya01.jpg" style="height:300" /> <br>
+  Illustration of the Nation of Bollyjee (Black represents metropolitan cities. Red
+  represents commune cities. Yellow represents industrial cities.)
+</p>
+
+<p style="text-align: justify;">
+  Because Bollyjee is a developing nation (a nation that just achieved independence and 
+  is still in the developing phase), Bollyjee still hasn't acquired means of transportations
+  to travel between towns. Due to that, President Maxi decided to build a railway 
+  system by constructing $$$N - 1$$$ bidirectional connecting rails between cities. 
+  After running a discussion with the ministers and experts, the President decided to 
+  design a railway system by following the steps below:
+</p>
+
+<p style="text-align: justify;">
+  1. Connect all metropolitan cities with $$$K - 1$$$ rails. <br>
+  2. Connect each commune city with either metropolitan cities or other commune cities which
+  have been connected. <br>
+  3. Connect each industrial city with either metropolitan cities or other commune cities
+  which have been connected. <br>
+  4. Transportation cost between cities is calculated by the sum of "travel cost" of each
+  traversed rail. <br>
+  5. "Travel cost" is the required amount of money to be paid when traversing a rail connecting city $$$U$$$ and city $$$V$$$. 
+</p>
+
+<p style="text-align: center;">
+  <img src="render/tamasya02.jpg" style="height:300" /> <br>
+  Illustration of the Nation of Bollyjee with a finished railway system.
+</p>
+
+<p style="text-align: justify;">
+  After the completion of the railway system, President Maxi set the "travel cost" for 
+  each rail. However, the cost set by the President is considered an experimental 
+  cost that can change from time to time. Therefore, at some point the "travel cost" 
+  can be increased by $$$C$$$. To prevent the cost from being too expensive, 
+  the president decided to not adjust the prices of "travel cost" between two 
+  metropolitan cities.
+</p>
+
+<p style="text-align: justify;">
+  Hearing that, Jelix Fingga, a businessman, wants to know the transportation costs of 
+  raw materials between industrial city $$$U$$$ and industrial city $$$V$$$ so that 
+  his factory could continue production. As a professional consultant and friend of
+  Jelix Fingga, you are requested to help him perform the calculation.
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $$$T$$$ — the number of test cases.
+</p>
+
+<p style="text-align: justify;">
+  Each test case starts with two integers $$$N$$$ and $$$Q$$$, 
+  denoting the number of cities and the number of questions asked by Jelix Fingga respectively. The next line consists of $$$N - 1$$$ integers, in which the $$$i$$$-th integer is $$$P_i$$$ ($$$2 \le i \le N$$$), indicating a rail between city $$$i$$$ and $$$P_i$$$. Then followed by a line containing $$$N - 1$$$ integers, in which the $$$i$$$-th integer is $$$\textrm{Val}_i$$$ ($$$2 \le i \le N$$$), representing the "travel cost" of the rail connecting city $$$i$$$ and city $$$P_i$$$.
+</p>
+
+<p style="text-align: justify;">
+  The next $$$Q$$$ lines are each filled with three integers. There are two types of
+  queries in this question: <br>
+    1. $$$1 \ \, U \ C$$$, which increases the "travel cost" of the rail connecting
+    city $$$U$$$ and city $$$P_U$$$ by $$$C$$$. <br>
+    2. $$$2 \ \, U \ V$$$, which queries the transportation cost between city $$$U$$$
+    and city $$$V$$$. <br>
+</p>
+
+
+<p style="text-align: justify;">
+</p>
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  Each test case starts by outputting "Kasus #$$$X$$$:" (without quotes), 
+  where $$$X$$$ is the case number (starting from $$$1$$$), then output $$$Y$$$ lines, 
+  where $$$Y$$$ is the number of questions (query type 2) asked by Jelix Fingga. The  
+  $$$i$$$-th line consists of one integer, which is the answer to the $$$i$$$-th 
+  question asked by Jelix Fingga. After each test case, output a blank line.
+</p>
+
+<h3>Output Format</h3>
+
+<ul>
+  <li style="text-align: justify;">$$$1 \le T \le 5$$$.</li>
+  <li style="text-align: justify;">$$$1 \le N, Q \le 10^5$$$.</li>
+  <li style="text-align: justify;">$$$0 \le K \le 100$$$. (not given in the input)</li>
+  <li style="text-align: justify;">$$$1 \le U, V, P_i \le N$$$.</li>
+  <li style="text-align: justify;">$$$1 \le \textrm{Val}_i, C \le 1000$$$.</li>
+</ul>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+6 5
+4 1 3 3 4
+6 5 3 2 4
+2 1 6
+2 5 1
+1 5 8
+2 1 6
+2 5 1
+12 4
+5 1 2 1 8 8 5 8 5 1 1
+4 5 7 7 2 9 6 3 1 3 1
+2 4 3
+2 6 9
+1 2 3
+2 4 10
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1:
+12
+7
+12
+15
+
+Kasus #2:
+23
+5
+15
+
+</pre>
+
+<h3>Explanation</h3>
+<p style="text-align: justify;">
+   The following is the railway system for case $$$1$$$:
+</p>
+
+<table style="width:55%">
+  <tr>
+    <td colspan="2" style="text-align: center;"><img src="render/tamasya_s01.png" style="height:55%"/></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Before the addition of "travel cost"</td>
+    <td style="text-align: center;">After the addition of "travel cost"</td>
+  </tr>
+</table>
+ 
+<p style="text-align: justify;">
+   The following is the railway system for case $$$2$$$:
+</p>
+
+<table style="width:70%">
+  <tr>
+    <td style="text-align: center;"><img src="render/tamasya_s02.jpg" style="height:65%"/></td>
+    <td style="text-align: center;"><img src="render/tamasya_s03.jpg" style="height:65%"/></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Before the addition of "travel cost"</td>
+    <td style="text-align: center;">After the addition of "travel cost"</td>
+  </tr>
+</table>
+ 
