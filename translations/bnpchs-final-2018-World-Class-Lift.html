@@ -1,0 +1,71 @@
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  World Class University has a sky-high building for student residence. 
+  This residence is called "World Square" or often abbreviated as WS. 
+  WS building had a World Class Elevator. 
+  Because of the extraordinary quality, WS only needs one elevator to accommodate all of the collegers.
+</p>
+
+<p style="text-align: justify">
+  There are $$$N$$$ passenger in first floor inside the elevator right now.
+  The $$$i$$$-th passenger of the the elevator wants to get to $$$X_{i}$$$-th floor and has an elevator tolerance value of $$$Y_{i}$$$. 
+  The elevator tolerance value concludes the range of floors so that 
+  the $$$i$$$-th passenger won't get annoyed if the $$$i$$$-th passenger got dropped 
+  between floor $$$X_{i} - Y_{i}$$$ and $$$X_{i} + Y_{i}$$$ (inclusive). 
+  After the ride passenger can go to the desired floor using the stairs. 
+  Mind that every passenger could have a different value of elevator tolerance. 
+</p>
+
+<p style="text-align: justify;">
+  You need to find the least number of discharge required for World Class Elevator 
+  to deliver all of the passengers from the first floor without annoying anyone. 
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with a single integer $$$T (1 \leq T \leq 10)$$$ the number of test cases. 
+  The next lines contain the description of each test case as explained below. <br>
+  The first line of each case contains a positive integer $$$N (1 \leq N \leq 10^5) - $$$ the number of passenger. <br>
+  The next $$$N$$$ lines contains 2 integers $$$X_{i} (2 \leq X_{i} \leq 10^5)$$$ and $$$Y_{i} (0 \leq Y_{i} \leq 10^5) - $$$ 
+  the destination and the elevator tolerance value of the $$$i$$$-th passenger. 
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output Kasus #$$$X$$$: $$$Y$$$" (without quotation marks), where $$$X$$$ is the case number starting from 1, 
+  and $$$Y$$$ is the least number of discharge required for World Class Elevator to deliver all of the passengers.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+5
+2 2
+3 1
+4 0
+5 1
+6 2
+4
+2 5
+4 2
+10 2
+12 0
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: 1
+Kasus #2: 2  
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  For the first case, World-Class Elevator would only stop once on the fourth floor. <br>
+  In the second case, World Class Elevator will stop twice, one of the combinations of optimal stoppage is by stopping in the fourth and twelfth floor.
+</p>
