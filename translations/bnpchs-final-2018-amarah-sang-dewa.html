@@ -1,0 +1,190 @@
+<!-- Title : God's Wrath -->
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  The nation of Bollyjee has experienced in-fighting between their tribes (<em>civil war</em>) for a long time. There are $$$K$$$ tribes ($$$1 \le K \le 26$$$) clashing. Each tribe is represented with initials from <code>A</code> to <code>Z</code>. The nation of Bollyjee can be represented as a grid with $$$R$$$ rows $$$\times$$$ $$$C$$$ columns. Each cell can be controlled by only one tribe (labeled by that tribe's initials) or not conquered by any tribe (labeled with <code>.</code>).
+</p>
+
+<p style="text-align: justify;">
+  Two cells that are adjacent to each other (share an edge) are in the same territory if those two cells are also controlled by the same tribe. If cell $$$U$$$ and cell $$$V$$$ are in the same territory and cell $$$V$$$ and cell $$$W$$$ are in the same territory, therefore cell $$$U$$$ and cell $$$W$$$ are also in the same territory.
+</p>
+
+<p style="text-align: justify;">
+  Each tribe can have more than one territory or even no territory at all. The grid below shows three tribes where tribes <code>A</code>, <code>B</code>, and <code>C</code> have 2, 1, and 3 territories respectively.
+</p>
+
+<table style="table-layout: fixed; width: 250">
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#93c47d">C</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#93c47d">C</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#b6d7a8">C</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+</table>
+
+<p style="text-align: justify;">
+  Each tribe really cares about safety protocols. Due to that, the following property is abided for all territories: For each pair of different cells within one territory, there exists <b>exactly</b> one shortest route from one cell to the other.
+</p>
+
+<p style="text-align: justify;">
+  The shortest route is from cell $$$U$$$ to cell $$$V$$$ is defined as a series of movements in four directions (left, up, right, or down) from cell $$$U$$$ to cell $$$V$$$ such that each traversed cell is within one territory and the number of movements used is minimized. 
+</p>
+
+<p style="text-align: justify;">
+  For example, in the grid below, there exists only one shortest route from B<sub>1</sub> to B<sub>2</sub>, which is left - down - down - right - right.
+</p>
+
+<table style="table-layout: fixed; width: 250">
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#93c47d">C</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#f9cb9c">A</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:black; color:white">B<sub>1</sub></td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#93c47d">C</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#b6d7a8">C</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+  <tr style="height:25">
+    <td style="text-align: center;">.</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:#a4c2f4">B</td>
+    <td style="text-align: center;background-color:black; color:white">B<sub>2</sub></td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#f6b26b">A</td>
+    <td style="text-align: center;background-color:#38761d; color:white">C</td>
+  </tr>
+</table>
+
+<p style="text-align: justify;">
+  Watching his denizens continuously waging wars, God Jelix becomes furious. He passed judgment onto his denizens by conceiving $$$Q$$$ plans of destruction. Every destruction plan is independent of each other. In other words, each destruction plan does not affect another. 
+</p>
+
+<p style="text-align: justify;">
+  For each plan of destruction, the following will be done by God Jelix :
+</p>
+
+<ul>
+  <li style="text-align: justify;">God Jelix will choose one sub-rectangle from the grid. This sub-rectangle is represented with two cells referring to the top-left cell ($$$r_1, c_1$$$) and the bottom-right cell ($$$r_2, c_2$$$) of the sub-rectangle.</li>
+  <li style="text-align: justify;">God Jelix will then destroy all cells outside the sub-rectangle that was chosen. Therefore all territories controlled by whichever tribe that exists outside of the sub-rectangle will be gone and no longer controlled by any tribe.</li>
+  <li style="text-align: justify;">After completing the destruction plan, God Jelix will then <b>count how many territories are left</b> in the nation of Bollyjee. There could exist two squares that were at first within one territory, but after the destruction, those squares are now separated (no longer within the same territory).</li>
+</ul>
+
+Your task is to determine how many territories are left in the nation of Bollyjee for each plan of destruction. Keep in mind that each plan of destruction is independent of each other.
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $$$T$$$ — the number of test cases.
+</p>
+
+<p style="text-align: justify;">
+  Each test case starts with three integers $$$R$$$, $$$C$$$, and $$$Q$$$ ($$$1 \le R, C \le 500; 1 \le Q \le 10^5$$$). The next $$$R$$$ lines each contains $$$C$$$ characters denoting the label of each cell. Each character is either a <code>.</code> if the cell is not occupied or capital letters from <code>A</code> to <code>Z</code> if it is controlled by a tribe.
+</p>
+
+<p style="text-align: justify;">
+  Input is then followed by $$$Q$$$ lines. Each line consisting of four space-separated integers $$$r_1$$$, $$$c_1$$$, $$$r_2$$$, and $$$c_2$$$ ($$$1 \le r_1 \le r_2 \le R; 1 \le c_1 \le c_2 \le C$$$).
+</p>
+
+<p style="text-align: justify;">
+  C++ users are recommended to use fast input/output, such as <code>scanf/printf</code>. 
+</p>
+
+<p style="text-align: justify;">
+  It is guaranteed that the total queries of all test cases do not exceed $$$3 \times 10^5$$$.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output <code>Kasus #X:</code>, where $$$X$$$ is the case number (starting from $$$1$$$), followed by $$$Q$$$ lines where each line contains an integer referring to the answer for each destruction plan willed by God Jelix.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+4 8 3
+AA..C.CC
+ABB.CA.C
+BBCB.A.C
+.BBBAAAC
+1 1 4 8
+2 3 4 5
+1 4 2 4
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1:
+6
+5
+0
+</pre>
+
+<h3>Explanation</h3>
+<p style="text-align: justify;">
+  The grid from the sample case is given in the description.
+</p>
+<ul>
+  <li style="text-align: justify;">For the first destruction plan, there are clearly no destroyed cells, therefore there are 6 territories left over.</li>
+  <li style="text-align: justify;">For the second destruction plan, tribes <code>A</code>, <code>B</code>, and <code>C</code> have 1, 2, and 2 territories respectively.</li>
+  <li style="text-align: justify;">For the third destruction plan, all cells within the sub-rectangle chosen by God Jelix are unoccupied cells, therefore there are no territories left over.</li>  
+</ul>
