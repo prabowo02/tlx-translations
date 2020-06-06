@@ -7,19 +7,18 @@
   Because of the extraordinary quality, WS only needs one elevator to accommodate all of the collegers.
 </p>
 
-<p style="text-align: justify">
-  There are $$$N$$$ passenger in first floor inside the elevator right now.
-  The $$$i$$$-th passenger of the the elevator wants to get to $$$X_{i}$$$-th floor and has an elevator tolerance value of $$$Y_{i}$$$. 
-  The elevator tolerance value concludes the range of floors so that 
-  the $$$i$$$-th passenger won't get annoyed if the $$$i$$$-th passenger got dropped 
-  between floor $$$X_{i} - Y_{i}$$$ and $$$X_{i} + Y_{i}$$$ (inclusive). 
-  After the ride passenger can go to the desired floor using the stairs. 
-  Mind that every passenger could have a different value of elevator tolerance. 
+<p style="text-align: justify;">
+  You need to find the least number of stops required for the World Class Elevator 
+  to drop off all of the elevator passengers from the first floor without annoying any of the passengers. 
 </p>
 
-<p style="text-align: justify;">
-  You need to find the least number of discharge required for World Class Elevator 
-  to deliver all of the passengers from the first floor without annoying anyone. 
+<p style="text-align: justify">
+  Mind that every passenger could have a different value of elevator tolerance. 
+  The elevator tolerance value concludes the range of floors 
+  so that the passenger will not get annoyed when the passenger got dropped not on the desired floor. 
+  After the ride passenger can go to the desired floor using the stairs. 
+  Everyone has a desired floor $$$X$$$ and elevator tolerance value of $$$Y$$$.
+  This means the passenger will not get annoyed if the passenger got dropped between the $$$(X - Y)$$$-th floor and the $$$(X + Y)$$$-th floor (inclusive).  
 </p>
 
 <h3>Input Format</h3>
@@ -36,7 +35,7 @@
 
 <p style="text-align: justify;">
   For each test case, output Kasus #$$$X$$$: $$$Y$$$" (without quotation marks), where $$$X$$$ is the case number starting from 1, 
-  and $$$Y$$$ is the least number of discharge required for World Class Elevator to deliver all of the passengers.
+  and $$$Y$$$ is the least number of stop required for World Class Elevator to drop off all of the passengers.
 </p>
 
 <h3>Sample Input</h3>
@@ -66,6 +65,6 @@ Kasus #2: 2
 <h3>Explanation</h3>
 
 <p style="text-align: justify;">
-  For the first case, World-Class Elevator would only stop once on the fourth floor. <br>
-  In the second case, World Class Elevator will stop twice, one of the combinations of optimal stoppage is by stopping in the fourth and twelfth floor.
+  For the first case, the World Class Elevator would only stop once on the fourth floor. <br>
+  In the second case, the World Class Elevator will stop twice. One of the ways is by stopping in the second and twelfth floor.
 </p>
