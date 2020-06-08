@@ -13,28 +13,28 @@
 </p>
 
 <p style="text-align: justify">
-  Mind that every passenger could have a different value of elevator tolerance. 
-  The elevator tolerance value concludes the range of floors 
-  so that the passenger will not get annoyed when the passenger got dropped not on the desired floor. 
-  After the ride passenger can go to the desired floor using the stairs. 
-  Everyone has a desired floor $$$X$$$ and elevator tolerance value of $$$Y$$$.
-  This means the passenger will not get annoyed if the passenger got dropped between the $$$(X - Y)$$$-th floor and the $$$(X + Y)$$$-th floor (inclusive).  
+  Mind that every passenger has differing <b>elevator tolerance value</b>.
+  The elevator tolerance value is the number of floors 
+  the passenger will not mind when the passenger is dropped not on the desired floor 
+  (after the ride, the passenger will go to the desired floor using stairs). 
+  Each person has a desired floor $$$X$$$ and elevator tolerance value of $$$Y$$$. 
+  This means the passenger will not get annoyed if the passenger is dropped between the $$$(X - Y)$$$-th floor and $$$(X + Y)$$$-th floor (inclusive).   
 </p>
 
 <h3>Input Format</h3>
 
 <p style="text-align: justify;">
-  Input starts with a single integer $$$T (1 \leq T \leq 10)$$$ the number of test cases. 
+  Input starts with a single integer $$$T (1 \leq T \leq 10)$$$, where $T$ is the number of test cases. 
   The next lines contain the description of each test case as explained below. <br>
-  The first line of each case contains a positive integer $$$N (1 \leq N \leq 10^5) - $$$ the number of passenger. <br>
-  The next $$$N$$$ lines contains 2 integers $$$X_{i} (2 \leq X_{i} \leq 10^5)$$$ and $$$Y_{i} (0 \leq Y_{i} \leq 10^5) - $$$ 
+  The first line of each case contains a positive integer $$$N (1 \leq N \leq 10^5) - $$$ the number of passengers. <br>
+  The next $$$N$$$ lines contain 2 integers $$$X_{i} (2 \leq X_{i} \leq 10^5)$$$ and $$$Y_{i} (0 \leq Y_{i} \leq 10^5) - $$$ 
   the destination and the elevator tolerance value of the $$$i$$$-th passenger. 
 </p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  For each test case, output Kasus #$$$X$$$: $$$Y$$$" (without quotation marks), where $$$X$$$ is the case number starting from 1, 
+  For each test case, output "Kasus #$$$X$$$: $$$Y$$$" (without quotation marks), where $$$X$$$ is the case number starting from 1, 
   and $$$Y$$$ is the least number of stop required for World Class Elevator to drop off all of the passengers.
 </p>
 
