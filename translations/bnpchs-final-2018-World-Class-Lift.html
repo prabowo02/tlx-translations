@@ -1,0 +1,70 @@
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  World Class University has a sky-high building for student residence. 
+  This residence is called "World Square" or often abbreviated as WS. 
+  WS building had a World Class Elevator. 
+  Because of the extraordinary quality, WS only needs one elevator to accommodate all of the collegers.
+</p>
+
+<p style="text-align: justify;">
+  You need to find the least number of stops required for the World Class Elevator 
+  to drop off all of the elevator passengers from the first floor without annoying any of the passengers. 
+</p>
+
+<p style="text-align: justify">
+  Mind that every passenger has differing <b>elevator tolerance value</b>.
+  The elevator tolerance value is the number of floors 
+  the passenger will not mind when the passenger is dropped not on the desired floor 
+  (after the ride, the passenger will go to the desired floor using stairs). 
+  Each person has a desired floor $$$X$$$ and elevator tolerance value of $$$Y$$$. 
+  This means the passenger will not get annoyed if the passenger is dropped between the $$$(X - Y)$$$-th floor and $$$(X + Y)$$$-th floor (inclusive).   
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with a single integer $$$T (1 \leq T \leq 10)$$$, where $T$ is the number of test cases. 
+  The next lines contain the description of each test case as explained below. <br>
+  The first line of each case contains a positive integer $$$N (1 \leq N \leq 10^5) - $$$ the number of passengers. <br>
+  The next $$$N$$$ lines contain 2 integers $$$X_{i} (2 \leq X_{i} \leq 10^5)$$$ and $$$Y_{i} (0 \leq Y_{i} \leq 10^5) - $$$ 
+  the destination and the elevator tolerance value of the $$$i$$$-th passenger. 
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output "Kasus #$$$X$$$: $$$Y$$$" (without quotation marks), where $$$X$$$ is the case number starting from 1, 
+  and $$$Y$$$ is the least number of stop required for World Class Elevator to drop off all of the passengers.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+5
+2 2
+3 1
+4 0
+5 1
+6 2
+4
+2 5
+4 2
+10 2
+12 0
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: 1
+Kasus #2: 2  
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  For the first case, the World Class Elevator would only stop once on the fourth floor. <br>
+  In the second case, the World Class Elevator will stop twice. One of the ways is by stopping in the second and twelfth floor.
+</p>
