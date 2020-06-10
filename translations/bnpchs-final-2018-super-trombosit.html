@@ -1,0 +1,114 @@
+<!-- Title : Super Thrombocyte -->
+
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  There is new research in immunology, called Super Thrombocyte. 
+  A Super Thrombocyte is able to heal injuries in the body much faster compared to a normal thrombocyte. 
+  According to research, the number of Super Thrombocyte required to heal an injury is 
+  dependent on three variables: $$$X$$$, $$$Y$$$, and $$$Z$$$. These variables are all integers.
+</p>
+
+<p style="text-align: justify;">
+  The number of Super Thrombocyte that is required is as follows:
+</p>
+
+<p style="text-align: justify;">
+  $$${\Large \textrm{ST}(X,Y,Z) =  \textrm{GCD}(X^1 + Y, X^2 + Y, X^4 + Y, \dots, X^{2^Z} + Y)}$$$
+</p>
+
+<p style="text-align: justify;">
+  Where $$$\textrm{GCD}(A, B, \dots)$$$ refers to the 
+  <a href="https://en.wikipedia.org/wiki/Greatest_common_divisor" target="_blank">greatest common divisor</a> 
+  of $$$A, B, \dots$$$
+</p>
+
+<p style="text-align: justify;">
+  Currently, you have three arrays : $$$P$$$, $$$Q$$$, and $$$R$$$, each containing $$$N$$$ integers. 
+  Array $$$P$$$ stores all possible values of $$$X$$$. 
+  Array $$$Q$$$ stores all possible values of $$$Y$$$. 
+  Array $$$R$$$ stores all possible values of $$$Z$$$.
+</p>
+
+<p style="text-align: justify;">
+  Your task is to calculate the total number of Super Thrombocytes required for all possible combinations of values $$$X$$$, $$$Y$$$, and $$$Z$$$. 
+  Formally, it is defined as the following:
+</p>
+
+<p style="text-align: justify;">
+  $$${\Large \displaystyle\sum_{i = 1}^{N} \displaystyle\sum_{j = 1}^{N} \displaystyle\sum_{k = 1}^{N} \, {\textrm{ST}(P_i,Q_j,R_k)}}$$$
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $$$T$$$ ($$$1 \le T \le 5$$$)— the number of test cases.
+</p>
+
+<p style="text-align: justify;">
+  Each test case starts with an integer $$$N$$$ ($$$1 \le N \le 200$$$), representing sizes of arrays $$$P$$$, $$$Q$$$, and $$$R$$$. 
+  The next $$$N$$$ lines each contains three integers $$$P_i$$$, $$$Q_i$$$, and $$$R_i$$$ ($$$1 \le P_i, Q_i \le 10^{12}; 0 \le R_i \le 50$$$), 
+  which is the $$$i$$$-th integer in arrays $$$P$$$, $$$Q$$$, and $$$R$$$ respectively.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output <code>Kasus #X: Y</code>, where $$$X$$$ is the case number (starting from $$$1$$$), 
+  and $$$Y$$$ is the total number of Super Trombocytes required. 
+  It is guaranteed $$$Y$$$ does not exceed the limits of an <b>unsigned 64-bit integer</b>.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+2
+2 2 2
+3 6 3
+1
+123456789 987654321 0
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: 16
+Kasus #2: 1111111110
+</pre>
+
+<h3>Explanation</h3>
+<p style="text-align: justify;">
+  For the first case,
+</p>
+<ul>
+  <li style="text-align: justify;">$$$ST(2,2,2) = 2$$$</li>
+  <li style="text-align: justify;">$$$ST(2,2,3) = 2$$$</li>
+  <li style="text-align: justify;">$$$ST(2,6,2) = 2$$$</li>
+  <li style="text-align: justify;">$$$ST(2,6,3) = 2$$$</li>
+  <li style="text-align: justify;">$$$ST(3,2,2) = 1$$$</li>
+  <li style="text-align: justify;">$$$ST(3,2,3) = 1$$$</li>
+  <li style="text-align: justify;">$$$ST(3,6,2) = 3$$$</li>
+  <li style="text-align: justify;">$$$ST(3,6,3) = 3$$$</li>  
+</ul>
+<p style="text-align: justify;">
+  Therefore the total number of Super Thrombocytes required is $$$16$$$.
+</p>
+
+<br>
+
+<p style="text-align: justify;">
+  For the second case,
+</p>
+<ul>
+  <li style="text-align: justify;">$$$ST(123456789,987654321,20 = 1111111110$$$</li>  
+</ul>
+<p style="text-align: justify;">
+  Therefore the total number of Super Thrombocytes required is $$$1111111110$$$.
+</p>
+
+<h3>Note</h3>
+<p style="text-align: justify;">
+  GCD (Greatest Common Divisor) of $$$K$$$ integers $$$X_1, X_2, \dots X_K$$$ is an integer $$$G$$$, 
+  such that all $$$K$$$ integers $$$X_1, X_2, \dots X_K$$$ are divisible by $$$G$$$ and $$$G$$$ is maximized.
+</p>
