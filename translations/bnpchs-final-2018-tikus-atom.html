@@ -9,14 +9,14 @@
 
 <p style="text-align: justify;">
   Jelix Fingga does not want any explosion to happen, and he wants to defuse all bombs.
-  But Felix Fingga can defuse a bomb only if the armed mole lying at coordinate $(0, 0, 0)$.
+  But Jelix Fingga can only defuse a bomb only if the armed mole lies at coordinate $(0, 0, 0)$.
   You can ignore a mole whose bomb has been defused.
 </p>
 
 <p style="text-align: justify">
   Fortunately, Jelix Fingga has the power to control the <b>direction</b> of each mole. 
-  Each mole can move in any direction possible in 3-dimensional space with constant velocity <b>1 meter per minute</b> 
-  The mole <b>moves simultaneously</b> and they <b>cannot stop</b>.
+  Each mole can move in any direction in 3-dimensional space with constant velocity <b>1 meter per minute</b> 
+  The moles <b>move simultaneously</b> and they <b>cannot stop</b>.
 </p>
 
 <p style="text-align: justify">
@@ -43,7 +43,7 @@
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  Minimum time to defuse all bombs in minute. Your answer will be considered correct if its absolute error does not exceed $10^{−7}$.
+  Minimum time to defuse all bombs in minutes. Your answer will be considered correct if its absolute error does not exceed $10^{−7}$.
 </p>
 
 <h3>Sample Input 1</h3>
@@ -77,12 +77,12 @@
 
 <p style="text-align: justify;">
   In the first case, the first mole needs 1 minute to go from its starting position to $(0, 0, 0)$. <br>
-  In the second case, both moles need 1.73205080757 minutes to go from its starting position to $(0, 0, 0)$. But if they move at same time 
-  from their starting position to $(0, 0, 0)$, their distace will less than 1 meter while moving thus explode the bomb. One valid optimal solution as follow:
+  In the second case, both moles need 1.73205080757 minutes to go from their starting positions to $(0, 0, 0)$. But if they move at the same time 
+  from their starting position to $(0, 0, 0)$, their distance will less than 1 meter while moving thus explode the bomb. One valid optimal solution is as follow:
   <ul>
     <li>The first mole moves to $(0, 0, 0)$ in 1.73205080757 minutes.</li>
-    <li>The second mole avoids the first mole by moving to coordinate $((1.59807621135, −1, −1)$ 
-    in 0.59807621135 minutes, then proceed to coordinate $(0, 0, 0)$ in 2.13397459622. </li>
+    <li>The second mole avoids the first mole by moving to coordinate $(1.59807621135, −1, −1)$ 
+    in 0.59807621135 minutes, then proceed to coordinate $(0, 0, 0)$ in 2.13397459622 minutes. </li>
     <li>The total time needed is 2.73205080757 minutes.</li>
     <li>Mind that we can ignore the first mole after it has been disarmed. In other words, it does not matter 
     if the distance between the first and the second mole is smaller than or equal to 1 meter.</li>
