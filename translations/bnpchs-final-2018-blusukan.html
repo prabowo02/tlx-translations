@@ -1,0 +1,94 @@
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Bollyjee presidential election is around the corner. Jelix as the presidential 
+  candidate wants to realize the national commitments by doing <i>blusukan</i> (blusukan 
+  is indonesian word that refer to hands-on interaction with public in order to notice their 
+  necessity).
+</p>
+
+<p style="text-align: justify;">
+  There are bunch of islands and $N$ province in Bollyjee. The island of two provinces lie on could be the 
+  same or different. Jelix had $M$ information, each information provide two provinces 
+  that lie on same island. If province $A$ and $B$ lie on the same island and province $B$ and $C$ lie 
+  on the same island then province $A$ and $C$ also lie on the same island.
+</p>
+
+<p style="text-align: justify;">
+  Each pair of province in the island is connected by a road. Also for each pair of road 
+  there are pavement that connect them so that Jelix can go from a road to other road with this 
+  pavement. Furthermore Jelix can use aerial transportation between islands. He can take off from any island 
+  and land on any island.
+</p>
+
+<p style="text-align: justify;">
+  The program that Jelix uses for blusukan as follow:
+  <ul>
+  <li>Jelix can start and end his program in any province on any island.</li>
+  <li>Jelix wants to visit <b>all roads</b> in Bollyjee, where he visits every road <b>exactly once</b>.</li>
+  <li>Pavements and roads are different, a visit in pavement is unnecessary and the order of visit is ignored.</li>
+  <li>Because air transports are expensive, Jelix only fly from a island to other island if he has visited all roads in the island.</li>
+  </ul>
+</p>
+
+<p style="text-align: justify;">
+  Jelix requested you to find how many different combination of his road visit, print the value modulo $10^9 + 7$.
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with an integer $T (1 \leq T \leq 100)$ — the number of test cases.<br>
+  Each test case consists of two integers $N (1 ≤ N ≤ 2000)$ and $M (0 ≤ M ≤ min(10, N)/2))$, <br>
+  Followed by $M$ lines each contains 2 integers $A$ and $B (1 ≤ A < B ≤ N)$ — province $A$ and $B$ lie on the same island. 
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  For each test case, output <code>Kasus #X: Y</code>, where $X$ is the case number (starting from $1$), and $Y$ is the number of different combination of his road visit modulo $10^9 + 7$.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+4
+10 1
+1 2
+3 3
+1 2
+2 3
+1 3
+5 0
+7 4
+1 2
+2 3
+4 5
+4 6
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: 1
+Kasus #2: 6
+Kasus #3: 1
+Kasus #4: 72
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  In the first case, there is only one road exist thus there is only 1 combination possible. <br>
+  In the second case, all possible combination as follow:
+  <ul><b><u>
+    <li>(1, 2) → (1, 3) → (2, 3)</li>
+    <li>(1, 2) → (2, 3) → (1, 3)</li>
+    <li>(1, 3) → (1, 2) → (2, 3)</li>
+    <li>(1, 3) → (3, 2) → (2, 1)</li>
+    <li>(2, 3) → (2, 1) → (1, 3)</li>
+    <li>(2, 3) → (3, 1) → (1, 2)</li>
+  </u></b></ul>
+  In the third case, Jelix cannot do any road visit because there is no road in the third case.<br>
+  In the fourth case, province $(1, 2, 3)$ lie on the same island while on the other island lie province $(4, 5, 6)$ at once.<br>
+</p>
