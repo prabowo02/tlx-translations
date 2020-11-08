@@ -1,0 +1,57 @@
+<!-- Title : Jelix and the Adorable Ants -->
+
+<h3>Description</h3>
+
+<p>
+  Jelix likes to play with the line of ants in his bathroom. He thinks those ants are adorable even though all of them have different shapes and sizes.
+</p>
+
+<p>
+  One day, when he was sitting in the bathroom, he started daydreaming. In his dream, an ant in that line received radiation and changed into a mutant ant that is not adorable. That mutant ant then started killing and eating all small ants in front and behind him. He was shocked, causing him to immediately woke up from his daydream. He then started to measure the body sizes of the ants.
+</p>
+
+<p>
+  Jelix numbers the ants from $1$ to $N$ (ant $1$ is at the front of the line, and ant $N$ is at the back of the line). Ant $i$ has size $U_i$. A mutant ant will kill and eat all ants smaller than itself that is in front of the mutant ant. The mutant ant stops when he meets an ant of <b>equal or greater size than itself</b>. After that, the mutant ant turns around and starts eating all ants smaller than itself that is behind the mutant ant. The mutant ant stops when he meets an ant of <b>equal or greater size than itself</b>.
+</p>
+
+<p>
+  The killings are formally defined as such: Ant $i$ that mutates will kill all ants $j$ that satisfies $L < i, j < R$, $j \neq i$, and $U_j < U_i \le U_L, U_R$ 
+</p>
+    
+<p>
+    Jelix wants to know if an adorable ant turns into a mutant ant, how many ants will become victims of the mutant ant?
+</p>
+
+
+<h3>Input Format</h3>
+<p>
+  Input starts with an integer $T$ ($1 \le T \le 10$) — the number of test cases. Each test case starts with an integer $N$ ($1 \le N \le 100\,000$) — the number of ants. The next line consists of $N$ integers $U_1, U_2, U_3, \dots U_N$ ($1 \le U_i \le 100\,000$). 
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  For each test case, output <code>Kasus #X: </code>, where $$$X$$$ is the test case number (starting from $$$1$$$). It is then followed by $N$ space-seperated integers $A_1, A_2, A_3 \cdot, A_N$ where $A_i$ is the number of adorable ants that will be eaten if ant $i$ becomes a mutant.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+5
+3 1 2 1 3
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Kasus #1: 3 0 2 0 3
+</pre>
+
+<h3>Explanation</h3>
+<ul>
+  <li style="text-align: justify;">If ant $1$ becomes a mutant, it will eat ants $2, 3, 4$.</li>
+  <li style="text-align: justify;">If ant $3$ becomes a mutant, it will eat ants $2, 4$.</li>
+  <li style="text-align: justify;">If ant $5$ becomes a mutant, it will eat ants $2, 3, 4$.</li>
+  <li style="text-align: justify;">No ants die if ant $2$ or ant $4$ becomes a mutant.</li>
+</ul>
