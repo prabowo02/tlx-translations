@@ -1,32 +1,32 @@
 <h3>Description</h3>
 
 <p style="text-align: justify;">
-  Chairoikoguma (otherwise known as Koguma) is a bear that loves honey a lot. At one time in the honey forest, while wandering around peacefully, Koguma found the 
-  location of the tastiest honey in the world. Koguma wants to stay as long as possible while eating honey.
+  Chairoikoguma (otherwise known as Koguma) is a bear that loves honey very much. One time in the honey forest, while wandering around peacefully, Koguma found the 
+  location of the tastiest honey in the world. Koguma wants to stay as long as possible while eating the honey.
 </p>
 
 <p style="text-align: justify;">
-  Unfavorably, Jelix, the landlord of the honey forest, despises the honey snatching. The forest populates bees. As soon as Jelix notices Koguma 
-  approaching the honey, he sends the bees from the hives to strike Koguma. Koguma wants to eat honey as long as possible, but he hates bee sting. Therefore Koguma eats 
-  honey for maximum possible time, then goes home safely.
+  Unfavorably, Jelix, the owner of the honey forest, despises that his honey is taken. The forest is populated by bees. As soon as Jelix notices Koguma 
+  approaching the honey, he sends the bees from the hives to strike Koguma. Koguma wants to eat honey as long as possible, but he hates bee sting. Therefore after Koguma 
+  eats the honey for maximum possible time, he will go home safely.
 </p>
 
 <p style="text-align: justify;">
-  The honey forest can be illustrated as $N \times N$ meters grid. With symbols as follow:
+  The honey forest can be illustrated as a $N \times N$ meters grid. There are symbols as follow:
   <ul>
   <li>The symbol <code>K</code> represents the initial position of Koguma,</li>
   <li>The symbol <code>.</code> represents an empty field, </li>
-  <li>The symbol <code>#</code> represents a woods that can be passed by neither of Koguma nor the bees,</li>
+  <li>The symbol <code>#</code> represents a woods that can be passed by neither Koguma nor the bees,</li>
   <li>The symbol <code>@</code> represents Koguma's house, </li>
-  <li>The symbol <code>H</code> represents a beehive. There can be more than one beehive in the forest.</li>
+  <li>The symbol <code>H</code> represents a beehive. There can be more than one beehives in the forest.</li>
   </ul>
 </p>
 
-<h4>Koguma Movements</h4>
+<h4>Koguma's Movements</h4>
 
 <p style="text-align: justify;">
-  In one second, Koguma can move <b>at most</b> $S$ steps in four directions: left, right, up and down. Each step could has different direction. For example if 
-  $S = 3$, then in 1 second Koguma can move with such direction: left-right-top, left-top, top, right-right-right, and so on.
+  In one second, Koguma can move <b>at most</b> $S$ steps in four directions: left, right, up, or down. These steps do not necessarily have the same direction. For 
+  example if $S = 3$, then in one second Koguma can move with these direction: left-right-up, left-up, up, right-right-right, and so on.
 </p>
 
 <p style="text-align: justify;">
@@ -37,18 +37,18 @@
 <h4>Bees Movement</h4>
 
 <p style="text-align: justify;">
-  Bees move as a colony, each colony move is as follow:
+  Bees move as a colony, each colony movement is as follow:
   <ul>
     <li>
-      In one second, each colony can split itself into at most four new colonies that move into the field in the left, right, top, or down from the initial field. The 
-      initial field still populates the old colony. They remain in place but also move to four directions continuously. Bees only move if the second is integer.
+      In one second, each colony can split itself into at most four new colonies that move into the field to the left, right, up, or down of its current field. The 
+      field where the colony was in still populated by the old colony. They remain in place but at the same time move to four directions. Bees only move in the integer 
+      second.
     </li>
     <li>
-      Formally, if a colony reside in field $(r, c)$ at $t$ seconds, then from $t$ seconds until $t + 0.999\dots$ seconds the colony will stay in field $(r, c)$. 
-      At $t + 1$ seconds fields $(r, c)$, $(r, c + 1)$, $(r, c - 1)$, $(r + 1, c)$, and $(r - 1, c)$ will populate the bee colony.  
-    </li>
+      Formally, if a colony resides in field $(r, c)$ at second $t$, then from second $t$ until $t + 0.999 \dots$ the colony will stay in field $(r, c)$. 
+      At second $t + 1$, the fields $(r, c)$, $(r, c + 1)$, $(r, c - 1)$, $(r + 1, c)$, and $(r - 1, c)$ will be populated by bee colonies.
     <li>
-      The bee colony can pass neither of Koguma's house nor a woods. The bees consider Koguma's house as a tree.
+      The bee colony can pass neither Koguma's house nor a woods. The bees consider Koguma's house as a tree.
     </li>
   </ul>
 </p>
@@ -56,23 +56,24 @@
 <h4>The Task</h4>
 
 <p style="text-align: justify;">
-  You have been requested to help Koguma specify the maximum time he can enjoy the honey in his initial position and goes home safely without any bee sting.
+  You have been requested to help Koguma specify the <b>maximum</b> time (in seconds) he can enjoy the honey in his initial position and goes home safely without any bee 
+  sting.
 </p>
 
 <h3>Input Format</h3>
 
 <p style="text-align: justify;">
   Input starts with a single integer $T (1 \leq T \leq 100)$, where $T$ is the number of test cases. <br>
-  Each test cases begin with 2 integers $N$ $(1 \leq N \leq 800)$ and $S$ $(1 \leq S \leq 1000)$. <br>
+  Each test case begins with 2 integers $N$ $(1 \leq N \leq 800)$ and $S$ $(1 \leq S \leq 1000)$. <br>
   The next $N$ lines contain $N$ characters that represent the grid of honey forest. <br>
-  It is guaranteed that there are exactly one character <code>K</code> and <code>@</code> in the grid, and there is a bee that can reach Koguma's starting position.
+  It is guaranteed that there is exactly one character <code>K</code> and one character <code>@</code> in the grid, and every bee can reach Koguma's starting position.
 </p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
   For each test case, output <code>Kasus #$X$: $Y$</code>, where $X$ is the case number starting from 1, 
-  and $Y$ is an integer represent the maximum time (in second) Koguma can enjoy the honey. If it is impossible for Koguma to reach his house output <code>-1</code> instead.
+  and $Y$ is an integer representing the maximum time (in seconds) Koguma can enjoy the honey. If it is impossible for Koguma to reach his house, output <code>-1</code> instead.
 </p>
 
 <h3>Sample Input</h3>
