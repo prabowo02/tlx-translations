@@ -2,52 +2,52 @@
 <h3>Description</h3>
 
 <p style="text-align: justify;">
-  Bollyjee presidential election is around the corner. Jelix as the presidential 
-  candidate wants to realize the national commitments by doing <i>blusukan</i> (blusukan 
-  is indonesian word that refer to hands-on interaction with public in order to notice their 
+  The general election of Bollyjee country is around the corner. Jelix as one of the presidential  
+  candidates wants to know the national needs by doing <i>blusukan</i> (blusukan 
+  is an indonesian word that refers to hands-on interaction with the public in order to notice their 
   necessity).
 </p>
 
 <p style="text-align: justify;">
-  There are a bunch of islands and $N$ province in Bollyjee. The island of two provinces lie on could be the 
-  same or different. Jelix had $M$ information, each information provide two provinces 
-  that lie on same island. If province $A$ and $B$ lie on the same island and province $B$ and $C$ lie 
-  on the same island then province $A$ and $C$ also lie on the same island.
+  There are a bunch of islands and $N$ provinces in Bollyjee. Two provinces can lie on the 
+  same or different islands. Jelix has $M$ informations, where each information provides two provinces 
+  that lie on the same island. If provinces $A$ and $B$ lie on the same island and provinces $B$ and $C$ lie 
+  on the same island, then provinces $A$ and $C$ also lie on the same island.
 </p>
 
 <p style="text-align: justify;">
-  Each pair of province in the island is connected by a road. Also for each pair of road 
-  there are pavement that connect them so that Jelix can go from a road to other road with this 
-  pavement. Furthermore Jelix can use aerial transportation between islands. He can take off from any island 
+  Each pair of provinces on an island are connected by a road. It is also known that for each pair of roads 
+  there is an alley that connects them so that Jelix can go from a road to the other road through this 
+  alley. Furthermore, Jelix can use air transport to travel between islands. He can take off from any island 
   and land on any island.
 </p>
 
 <p style="text-align: justify;">
-  The program that Jelix uses for blusukan is as follow:
+  The <em>blusukan</em> program that Jelix uses is as follow:
   <ul>
-  <li>Jelix can start and end his program in any province on any island.</li>
-  <li>Jelix wants to visit <b>all roads</b> in Bollyjee, where he visits every road <b>exactly once</b>.</li>
-  <li>Pavements and roads are different, a visit in pavement is unnecessary and the order of visit is ignored.</li>
-  <li>Because air transports are expensive, Jelix only fly from a island to other island if he has visited all roads in the island.</li>
+  <li>Jelix can start or end his program in any province on any island.</li>
+  <li>Jelix wants to visit <b>all roads</b> in Bollyjee <b>exactly once</b>.</li>
+  <li>Alleys and roads are considered different. Jelix does not have to visit every alley and the order of visits is ignored.</li>
+  <li>Because air transports are expensive, Jelix will fly from an island to another island only if he has visited all the roads on the island exactly once.</li>
   </ul>
 </p>
 
 <p style="text-align: justify;">
-  Jelix requested you to find how many different combination of his road visit, print the value modulo $10^9 + 7$.
+  Jelix requested you to find how many different orders of the road he will visit. Output the value modulo $10^9 + 7$.
 </p>
 
 <h3>Input Format</h3>
 
 <p style="text-align: justify;">
   Input starts with an integer $T (1 \leq T \leq 100)$ — the number of test cases.<br>
-  Each test case consists of two integers $N (1 ≤ N ≤ 2000)$ and $M (0 ≤ M ≤ min(10, N)/2))$, <br>
-  Followed by $M$ lines each contains 2 integers $A$ and $B (1 ≤ A < B ≤ N)$ — province $A$ and $B$ lie on the same island. 
+  Each test case consists of two integers $N (1 \leq N \leq 2000)$ and $M (0 \leq M \leq \min(10^5, N \times (N-1)/2))$. <br>
+  Then the next $M$ lines each contains 2 integers $A$ and $B (1 ≤ A < B ≤ N)$ which means provinces $A$ and $B$ lie on the same island. 
 </p>
 
 <h3>Output Format</h3>
 
 <p style="text-align: justify;">
-  For each test case, output <code>Kasus #X: Y</code>, where $X$ is the case number (starting from $1$), and $Y$ is the number of different combination of his road visit modulo $10^9 + 7$.
+  For each test case, output <code>Kasus #X: Y</code>, where $X$ is the case number (starting from $1$), and $Y$ is the number of different orders of the roads he will visit modulo $10^9 + 7$.
 </p>
 
 <h3>Sample Input</h3>
@@ -80,8 +80,8 @@ Kasus #4: 72
 <h3>Explanation</h3>
 
 <p style="text-align: justify;">
-  In the first case, there is only one road exist thus there is only 1 combination possible. <br>
-  In the second case, all possible combinations are as follow:
+  In the first case, there is only one road, thus there is only 1 possible order. <br>
+  In the second case, all possible orders are as follow:
   <ul><b><u>
     <li>(1, 2) → (1, 3) → (2, 3)</li>
     <li>(1, 2) → (2, 3) → (1, 3)</li>
@@ -90,6 +90,6 @@ Kasus #4: 72
     <li>(2, 3) → (2, 1) → (1, 3)</li>
     <li>(2, 3) → (3, 1) → (1, 2)</li>
   </u></b></ul>
-  In the third case, Jelix cannot do any road visit because there is no road in the third case, therefore the answer is 1.<br>
-  In the fourth case, province $(1, 2, 3)$ lie on the same island while on the other island lie province $(4, 5, 6)$ at once.<br>
+  In the third case, Jelix can only stay put because there is no road, therefore the answer is 1.<br>
+  In the fourth case, provinces $(1, 2, 3)$ lie on the same island while provinces $(4, 5, 6)$ lie on the other island.<br>
 </p>
