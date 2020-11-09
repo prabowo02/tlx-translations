@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  Jelix numbers the ants from $1$ to $N$ (ant $1$ is at the front of the line, and ant $N$ is at the back of the line). Ant $i$ has size $U_i$. A mutant ant will kill and eat all ants smaller than itself that is in front of the mutant ant. The mutant ant stops when he meets an ant of <b>equal or greater size than itself</b>. After that, the mutant ant turns around and starts eating all ants smaller than itself that is behind the mutant ant. The mutant ant stops when he meets an ant of <b>equal or greater size than itself</b>.
+  Jelix numbers the ants from $1$ to $N$ (ant $1$ is at the front of the line, and ant $N$ is at the back of the line). Ant $i$ has size $U_i$. A mutant ant will kill and eat all ants smaller than itself that is in front of the mutant ant until he meets an ant of <b>equal or greater size than</b> itself. After that, the mutant ant turns around and starts eating all ants smaller than itself that is behind the mutant ant until he meets an ant of <b>equal or greater size than</b> itself.
 </p>
 
 <p>
@@ -25,13 +25,13 @@
 
 <h3>Input Format</h3>
 <p>
-  Input starts with an integer $T$ ($1 \le T \le 10$) — the number of test cases. Each test case starts with an integer $N$ ($1 \le N \le 100\,000$) — the number of ants. The next line consists of $N$ integers $U_1, U_2, U_3, \dots U_N$ ($1 \le U_i \le 100\,000$). 
+  Input starts with an integer $T$ ($1 \le T \le 10$) — the number of test cases. Each test case starts with an integer $N$ ($1 \le N \le 100\,000$) — the number of ants. The next line consists of $N$ integers $U_1, U_2, U_3, \dots, U_N$ ($1 \le U_i \le 100\,000$) where $U_i$ is the size of ant $i$. 
 </p>
 
 <h3>Output Format</h3>
 
 <p>
-  For each test case, output <code>Kasus #X: </code>, where $$$X$$$ is the test case number (starting from $$$1$$$). It is then followed by $N$ space-seperated integers $A_1, A_2, A_3 \cdot, A_N$ where $A_i$ is the number of adorable ants that will be eaten if ant $i$ becomes a mutant.
+  For each test case, output <code>Kasus #X: </code>, where $X$ is the test case number (starting from $1$). It is then followed by $N$ space-separated integers $A_1, A_2, \cdot, A_N$ where $A_i$ is the number of adorable ants that will be eaten if ant $i$ becomes a mutant.
 </p>
 
 <h3>Sample Input</h3>
