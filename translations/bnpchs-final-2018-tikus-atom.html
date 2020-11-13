@@ -1,0 +1,96 @@
+<!-- Title: Atomic mole -->
+<h3>Description</h3>
+
+<p style="text-align: justify;">
+  Jelix Fingga has a house at coordinate $(0, 0, 0)$. The field near his house is resided by $N$ moles. Unfortunately, 
+  Jelix's neighbour arm each mole with a hydrogen bomb. The bomb will explode immediately if there is another bomb with
+  distance <b>less than</b> $R$ meters.
+</p>
+
+<p style="text-align: justify;">
+  Jelix Fingga does not want any explosion to happen, and he wants to defuse all bombs.
+  But Jelix Fingga can only defuse a bomb only if the armed mole lies at coordinate $(0, 0, 0)$.
+  You can ignore a mole whose bomb has been defused.
+</p>
+
+<p style="text-align: justify">
+  Fortunately, Jelix Fingga has the power to control the <b>direction</b> of each mole. 
+  Each mole can move in any direction in 3-dimensional space with constant velocity <b>1 meter per minute</b> 
+  The moles <b>move simultaneously</b> and they <b>cannot stop</b>.
+</p>
+
+<p style="text-align: justify">
+  Jelix Fingga knows the starting position of each mole. Each mole is given a number from $1$ to $N$ (inclusive). 
+  Mole with number $i$ can be represented as a dot with initial position $(X_i, Y_i, Z_i)$. It is guaranteed that 
+  the distance of any two different moles is not less than $R$ meters.
+</p>
+
+<p style="text-align: justify">
+  Jelix Fingga wants to know the minimum time he needs to defuse all bombs without causing any explosion. 
+  Help Jelix Fingga! Assume the time needed to defuse a bomb is 0 minutes.
+</p>
+
+<h3>Input Format</h3>
+
+<p style="text-align: justify;">
+  Input starts with two integers $N$ and $R$ $(1 \leq N \leq 10^5, 1 \leq R \leq 100)$, 
+  where $N$ is the number of moles and $R$ is the minimum explosive trigger distance of the bombs. <br>
+  The next $N$ lines contain 3 integers $X_i$, $Y_i$, and $Z_i$ $(-5000 \leq X_i, Z_i \leq 5000; -5000 \leq Y_i \leq 0)$ — 
+  the initial position of mole with number $i$. <br>
+  It is guaranteed that the distance of any two different moles is not less than $R$ meters.
+</p>
+
+<h3>Output Format</h3>
+
+<p style="text-align: justify;">
+  Minimum time to defuse all bombs in minutes. Your answer will be considered correct if its absolute error does not exceed $10^{−7}$.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+1 10
+0 -1 0
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+1
+</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+2 1
+1 -1 1
+1 -1 -1
+</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>
+2.73205080757
+</pre>
+
+<h3>Explanation</h3>
+
+<p style="text-align: justify;">
+  In the first case, the first mole needs 1 minute to go from its starting position to $(0, 0, 0)$. <br>
+  In the second case, both moles need 1.73205080757 minutes to go from their starting positions to $(0, 0, 0)$. But if they move at the same time 
+  from their starting position to $(0, 0, 0)$, their distance will be less than 1 meter while moving and thus will explode the bomb. One valid optimal solution is as follow:
+  <ul>
+    <li>The first mole moves to $(0, 0, 0)$ in 1.73205080757 minutes.</li>
+    <li>The second mole avoids the first mole by moving to coordinate $(1.59807621135, −1, −1)$ 
+    in 0.59807621135 minutes, then proceed to coordinate $(0, 0, 0)$ in 2.13397459622 minutes. </li>
+    <li>The total time needed is 2.73205080757 minutes.</li>
+    <li>Mind that we can ignore the first mole after it has been disarmed. In other words, it does not matter 
+    if the distance between the first and the second mole is smaller than or equal to 1 meter.</li>
+  </ul>
+</p>
+
+<h3>Note</h3>
+
+<p style="text-align: justify;">
+  The distance of 2 points $(X_a, Y_a, Z_a)$ and $(X_b, Y_b, Z_b)$ is $\sqrt{(X_a - X_b)^2 + (Y_a - Y_b)^2 + (Z_a - Z_b)^2}$
+</p>
