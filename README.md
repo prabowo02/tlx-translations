@@ -13,7 +13,7 @@ Semua orang dipersilakan untuk menambah terjemahan. Apabila Anda ingin berkontri
 
 2. Penerjemah akan menerjemahkan soal-soal dalam bentuk **HTML**. Apabila format deskripsi Bahasa Indonesianya berbentuk pdf, maka terjemahan bahasa Inggrisnya tetap berbentuk **HTML**. Bisa saja terdapat lebih dari satu penerjemah untuk sebuah problemset, dan penerjemah tidak harus sama dengan yang orang yang membuka issue penerjemahan. Contoh HTML bisa dilihat dalam folder `contoh`.
 
-3. Nama file terjemahan sebisa mungkin relevan (sebagai contoh: `bnpchs-final-2019-3-plus-1.html`) dan disimpan di dalam folder `translations`. Apabila sudah selesai diterjemahkan, buka [pull request](https://github.com/prabowo02/tlx-translations/pulls) dengan judul "Terjemahan [nama-problemset]: [judul-soal]". Sebagai contoh: "Terjemahan BNPCHS 2019 - Final: 3 Plus 1".
+3. Nama file terjemahan sebisa mungkin relevan (sebagai contoh: `bnpchs-2019-final-3-plus-1.html`) dan disimpan di dalam folder `translations`. Apabila sudah selesai diterjemahkan, buka [pull request](https://github.com/prabowo02/tlx-translations/pulls) dengan judul "Terjemahan [nama-problemset]: [judul-soal]". Sebagai contoh: "Terjemahan BNPCHS 2019 - Final: 3 Plus 1".
 
 4. Setelah di-review, Pull Request akan dimerge oleh pemilik repository. Setelah semua problemset direview, maka ditunggu agar penerjemahannya dimasukkan ke TLX.
 
