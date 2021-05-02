@@ -21,12 +21,14 @@ Semua orang dipersilakan untuk menambah terjemahan. Apabila Anda ingin berkontri
 
 Beberapa catatan yang perlu diperhatikan:
 
-- Untuk setiap baris pada file HTML, banyaknya karakter sebaiknya tidak melebihi 100. Hal ini dilakukan untuk mempermudah review.
+- Setiap baris sebaiknya berisi paling banyak satu kalimat. Hal ini dilakukan untuk mempermudah review.
 - Apabila Anda ingin menggunakan inline equation, gunakan `$$$`.
 - Apabila ingin menambahkan gambar, gunakan tag html `<img src="render/nama_gambar.png" />` dan tambahkan `nama_gambar.png` ke dalam pull request yang sama.
+- Tambahkan komentar judul soal bahasa Inggrisnya di paling atas `<!-- Title: English Title -->`.
 - Nama kontributor akan ditulis pada repo ini di bagian Credits.
 
 ## Credits
 
 - BNPCHS 2019 Final: [Edbert Geraldy Cangdinata](https://github.com/Berted), [Juan Carlo Vieri](https://github.com/juancarlovieri), [Maximillianus Utomo Quok](https://github.com/tzaph), [Steven Novaryo](https://github.com/stevennovaryo), [Vio Albert Ferdinand](https://github.com/VioAlbert).
 - BNPCHS 2018 Penyisihan: Edbert Geraldy Cangdinata, Juan Carlo Vieri, Vio Albert Ferdinand
+- BNPCHS 2018 Final: Steven Novaryo, Edbert Geraldy Cangdinata, Vio Albert Ferdinand
