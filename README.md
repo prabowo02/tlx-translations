@@ -22,7 +22,7 @@ Semua orang dipersilakan untuk menambah terjemahan. Apabila Anda ingin berkontri
 Beberapa catatan yang perlu diperhatikan:
 
 - Setiap baris sebaiknya berisi paling banyak satu kalimat. Hal ini dilakukan untuk mempermudah review.
-- Apabila Anda ingin menggunakan inline equation, gunakan `$$$`.
+- Apabila Anda ingin menggunakan inline equation, gunakan `$`.
 - Apabila ingin menambahkan gambar, gunakan tag html `<img src="render/nama_gambar.png" />` dan tambahkan `nama_gambar.png` ke dalam pull request yang sama.
 - Tambahkan komentar judul soal bahasa Inggrisnya di paling atas `<!-- Title: English Title -->`.
 - Nama kontributor akan ditulis pada repo ini di bagian Credits.
