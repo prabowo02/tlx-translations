@@ -1,0 +1,109 @@
+<head>
+  <script>
+    window.MathJax = {
+      tex: {
+      inlineMath: [['$$$', '$$$'], ['\\(', '\\)'], ['$', '$']]
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+
+<!-- Title : Merging Monster -->
+
+<h3> Description </h3>
+
+<p>
+	Mr. Chanek is a well known scientist in the Nation of Chanek. Mr. Chanek is researching about monsters which often attack the Nation of Chanek.
+</p>
+
+<p>
+	Mr. Chanek has $N$ experimental monster lining from left to right and numbered from $1$ to $N$. The $i$-th monster has power of $A_i$.
+
+	Mr. Chanek would like to do $M$ merging(s). Mr. Chanek can choose a monster and merge it with the monster directly to the right of the former monster.
+
+	After the merging, the two monsters will transform to a new monster with power equivalent to the sum of the two merged monsters.
+</p>
+
+<p>
+	Now Mr. Chanek is wondering, after $M$ merging(s), what is the maximum monster's power he has.
+</p>
+
+<h3> Input Format </h3>
+
+<p>
+	The first line consists of two integers $N$ and $M$, expressing the amount of experimental monster Mr. Chanek has and the amount of merging to be done, respectively.
+</p>
+
+<p>
+	The next line consists of $N$ integers $A_i$ expressing the power of the $i$-th experimental monster.
+</p>
+
+<h3> Output Format </h3>
+
+<p> 
+	An integer expressing the maximum experimental monster power after $M$ merging(s).
+</p>
+
+<h3> Sample Input </h3>
+
+<pre>
+7 3
+1 5 2 5 3 4 1
+</pre>
+
+<h3> Sample Output </h3>
+
+<pre>
+15
+</pre>
+
+<h3> Explanation </h3>
+
+<p>
+	First merging, merge the monster at the third position and the fourth. The monster configuration will be 1 5 7 3 4 1.
+</p>
+
+<p>
+	Second merging, merge the monster at the second position and the third. The monster configuration will be 1 12 3 4 1.
+</p>
+
+<p>
+	Third merging, merge the monster at the second position and the third. The monster configuration will be 1 15 3 4 1.
+</p>
+
+<p>
+	The maximum monster power after 3 mergings is 15.
+	One can prove that 15 is the maximum power which can be obtained.
+</p>
+
+<h3> Constraints </h3>
+
+<h4> For all subtasks </h4>
+<ul>
+	<li> $2 \le N \le 100\,000$ </li>
+	<li> $1 \le M \le N-1$ </li>
+	<li> $1 \le A_i \le 100\,000$ for $1 \le i \le N$ </li>
+</ul>
+
+<h4> Subtask 1 (18 points) </h4>
+<ul>
+	<li> $1 \le N \le 8$ </li>
+</ul>
+
+<h4> Subtask 2 (29 points) </h4>
+<ul>
+	<li> $1 \le N \le 1\,000$ </li>
+</ul>
+
+<h4> Subtask 3 (14 points) </h4>
+<ul>
+	<li> All values of $A_i$ are equal for $1 \le i \le N$ </li>
+</ul>
+
+<h4> Subtask 3 (39 points) </h4>
+<ul>
+	<li> No additional constaints. </li>
+</ul>
