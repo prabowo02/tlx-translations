@@ -1,0 +1,73 @@
+<!-- Title : Altering Character -->
+
+<h3> Description </h3>
+
+<p>
+	In the beginning, Mr. Chanek has a word with $N$ character(s). Mr.Chanek who just wants some fun would like to alter a character in the word into some different characters.
+</p>
+
+<p>
+	For example, Mr. Chanek has the word "SAYA" and Mr. Chanek would like to alter character "A" into "ANG". After the altering, the word becomes "SANGYANG".  
+</p>
+
+<p>
+	Mr. Chanek would like to do this altering operation $M$ time(s). On the $i$-th operation, Mr. Chanek will alter character $A_i$ into word $B_i$. Now Mr. Chanek asks, after $M$ alter(s), what is the length of the word he has
+</p>
+
+<h3> Input Format </h3>
+
+<p>
+	The first line consists of two integers $N$ and $M$, expressing the length of the word, and the amount of altering operation to be done, respectively.
+</p>
+
+<p>
+	The second line consists of a string expressing the word Mr. Chanek has in the beginning.
+</p>
+
+<p>
+	The next $M$ line consists of a character and a string separated by a space, expressing the character to be altered, and the word which the character should be altered to, respectively.
+</p>
+
+<h3> Output Format </h3>
+
+<p> 
+	An integer expressing the length of the word after $M$ altering(s).
+</p>
+
+<h3> Sample Input </h3>
+
+<pre>
+5 3
+SENAM
+S ER
+E AA
+A B
+</pre>
+
+<h3> Sample Output </h3>
+
+<pre>
+8
+</pre>
+
+<h3> Explanation </h3>
+
+<p>
+	After the first altering, the word becomes "ERENAM".
+</p>
+
+<p>
+	After the second altering, the word becomes "AARAANAM".
+</p>
+
+<p>
+	After the third altering, the word becomes "BBRBBNBM".
+</p>
+
+<h3> Constraints </h3>
+<ul>
+	<li> $1 \le N, M \le 100$ </li>
+	<li> $|B_i| \ge 1$ for all $1 \le i \le M$</li>
+	<li> The sum of characters of $B_i$ does not exceed $100$</li>
+	<li> All characters consists of capital letters A-Z </li>
+</ul>
