@@ -4,34 +4,34 @@
 <h3>Description</h3>
 
 <p>
-  Pak Chanek is a math teacher. Today, he is teaching $N$ students to count. Pak Chanek will give his $i$-th student 
-  an interval of numbers $[L_i, R_i]$. Then, the student will take turns (from student $1$ to student $N$) counting 
-  all numbers on the interval $[L_i, R_i]$ that has not been counted by a previous student. For example, say student 
-  $1$ gets interval $[2, 5]$. Then, if the student $2$ gets interval $[1, 6]$, they will only count $1$ and $6$,
-  because all numbers from $2$ to $5$ has been counted by student $1$.    
+  Pak Chanek is a math teacher. Today, he is teaching $N$ students to count. Sequentially from the first student, Pak Chanek will give the $i$-th student 
+  an interval of numbers $[L_i, R_i]$. The student will then take turns (from the first student to the $N$-th student) to mention 
+  all numbers on the interval $[L_i, R_i]$ that has not been mentioned by a previous student. For example, say the first student
+  gets interval $[2, 5]$. Then, if the second student gets interval $[1, 6]$, they will only mention $1$ and $6$,
+  because all numbers from $2$ to $5$ have been mentioned by the first student.
 </p>
 
 <p>
-  After all of Pak Chanek's students have counted the numbers, 
-  Pak Chanek wonders what is the sum of all the numbers that his students counted.
+  After all of Pak Chanek's students have mentioned the numbers, 
+  Pak Chanek wonders what is the sum of all the numbers that his students mentioned.
   Help Pak Chanek satisfy his curiosity!
 </p>
 
 <h3>Input Format</h3>
 
 <p>
-  The first line consists of a single integer $N$ - the number of Pak Chanek's students.
+  The first line consists of a single integer $N$ — the number of Pak Chanek's students.
 </p>
 
 <p>
-  The next $N$ lines contains two integers $L_i$ and $R_i$ - the interval that the $i$-th student receives from Pak Chanek.
+  The next $N$ lines contain two integers $L_i$ and $R_i$ — the interval that the $i$-th student receives from Pak Chanek.
 </p>
 
 
 <h3>Output Format</h3>
 
 <p>
-  An integer, the sum of all numbers that Pak Chanek's students counted.
+  An integer, the sum of all numbers that Pak Chanek's students mentioned.
 </p>
 
 <h3>Sample Input</h3>
