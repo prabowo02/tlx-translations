@@ -1,0 +1,125 @@
+<!-- Title : Cake Baking Competition -->
+
+<head>
+    <script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+        fontCache: 'global'
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<h3>Description</h3>
+
+<p>
+  In the ACM (Annual Cake Mashups) cake baking competition, there are $N$ contestants.
+  Each contestant has baked a cake and those cakes will be graded by the judges.
+  There are two aspects that affects the value of a cake, its delicacy value and its elegance value.
+  The $i$-th cake has delicacy value $L_i$ and elegance value $C_i$. 
+  All pairs $(L_i, C_i)$ are distinct.
+</p>
+
+<p>
+  The grading system is as follows. There are $M$ judges that will grade the cakes.
+  The $j$-th judge will choose two non-negative integers $A_j$ and $B_j$.
+  All pairs $(A_j, B_j)$ are distinct.
+  The value of the $i$-th cake according to the $j$-th judge is $A_j \times L_i + B_j \times C_i$.
+  After the $j$-th judge has graded all cakes, they will select the cake with the highest value according to them as their champion.
+  Note that if there are multiple cakes that satisfy the condition, all of them are selected as champions. 
+</p>
+
+<p>
+  Clearly, this is a very complicated system. However, that isn't important.
+  The question is "For each cake, how many judges selected that cake as their champion?"
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of two integers $M$ and $N$ — the number of judges and contestants
+  in the cake baking competition.
+</p>
+
+<p>
+  The next $M$ lines contain two integers $A_j$ and $B_j$ — the grading constants selected by the $j$-th judge.
+</p>
+
+<p>
+  The next $N$ lines contain two integers $L_i$ and $C_i$ — the delicacy value and elegance value
+  of the cake baked by the $i$-th contestant.
+</p>
+
+
+<h3>Output Format</h3>
+
+<p>
+  There are $N$ lines. The $i$-th line contains the number of judges that selected cake $i$ as their champion.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2 3
+2 2
+1 4
+4 5
+3 6
+1 7
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+1
+1
+1
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+    According to judge $1$:
+    <ul>
+        <li>Cake $1$ has value $2 \times 4 + 2 \times 5 = 18$</li>
+        <li>Cake $2$ has value $2 \times 3 + 2 \times 6 = 18$</li>
+        <li>Cake $2$ has value $2 \times 1 + 2 \times 7 = 16$</li>
+    </ul>
+</p>
+
+<p>
+    The highest value is reached by cake $1$ and $2$, thus judge $1$ will choose both cake $1$
+    and $2$ as their champion.
+</p>
+
+<p>
+    According to judge $2$:
+    <ul>
+        <li>Cake $1$ has value $1 \times 4 + 4 \times 5 = 24$</li>
+        <li>Cake $2$ has value $1 \times 3 + 4 \times 6 = 27$</li>
+        <li>Cake $2$ has value $1 \times 1 + 4 \times 7 = 29$</li>
+    </ul>
+</p>
+
+<p>
+    The highest value is reached by cake $3$, thus judge $2$ will choose cake $3$ 
+    as their champion.
+</p>
+
+
+
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le M, N \le 100\,000$</li>
+    <li>$1 \le L_i, C_i \le 10^9$ for $1 \le i \le N$</li>
+    <li>$1 \le A_j, B_j \le 10^9$ for $1 \le j \le M$</li>
+    <li>There are no two contestants that have the same pair $(L_i, C_i)$</li>
+    <li>There are no two judges that have the same pair $(A_j, B_j)$</li>
+</ul>
