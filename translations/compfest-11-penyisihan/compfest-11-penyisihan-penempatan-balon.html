@@ -1,0 +1,176 @@
+
+<!-- Title : Balloon Placement -->
+
+<h3>Description</h3>
+
+<p>
+    Pak Chanek has an enormous zoo. Besides generating profit, that zoo is also dedicated
+    to caring for and protecting endangered species.
+</p>
+
+<p>
+    As it turns out, there's a unique tradition by animal care organizations to acknowledge
+    distinguished zoos such as Pak Chanek's zoo. For each animal adopted by Pak Chanek,
+    the organization will gift a balloon that Pak Chanek can display in his zoo's garden.
+</p>
+
+<p>
+    Year by year passes and Pak Chanek's zoo keeps receiving balloons for each rare animal he
+    rescues. Eventually, the number of balloons ballooned to a point where the visitors cannot
+    count the number of balloons in the zoo anymore. 
+</p>
+
+<p>
+  In order to solve this issue, Pak Chanek decided he will discard a few balloons from the garden.
+  But, Pak Chanek still wants the balloons to be able to represent the number of balloons he
+  has.
+</p>
+
+<p>
+  Suddenly, Pak Chanek discovers a brilliant idea: he will place the balloons such that when viewed from
+  above with a drone, the balloons will form a number that is equal to the number of balloons Pak Chanek owns.
+  Sadly, due to the large number of balloons owned by Pak Chanek, he is confused as to how to place
+  his balloons, as such he requests your assistance.
+</p>
+
+<p>
+    Pak Chanek's courtyard can be represented as a grid consisting of $R \times C$ squares.
+    Pak Chanek has $N$ balloons that he wants to place in the courtyard. Each square can contain
+    at most one balloon. Pak Chanek wants to place these balloons such that when viewed from
+    above, the balloons will form the number $N$.
+</p>
+
+<p>
+    As for the shapes of the numbers, Pak Chanek decided to use the display seen in seven-segment
+    displays, examples of which can be seen below.
+    <br>
+    <img alt="seven segment" src="render/seven-segment.png">
+</p>
+
+<p>
+    For example, if Pak Chanek wants to form the number $9$, he will place his balloons 
+    as such:
+    <br>
+    <img alt="gambar 1" src="render/gambar-1.png" style="height: 250px;">
+</p>
+
+<p>
+    In the image above, the gray-colored squares are squares with a balloon 
+    and the white-colored squares are empty.
+</p>
+
+<p>
+    <strong>
+        Note that for the two images above, the height of each digit is $5$ 
+        and its width is $3$. Notice also that the number $1$ must always be aligned
+        to the right. Even though it might seem that the number has width $1$, it actually
+        has width $3$, but a thickness of $1$. The rules of number formation
+        will be elaborated further in the next few paragraphs.
+    </strong>
+</p>
+
+<p>
+    Of course, the image above is not the only way to form the number $9$. Pak Chanek
+    can also make a bigger shape or a thicker line segment. For example, see the image below:
+    <br>
+    <img alt="gambar 2" src="render/gambar-2.png" style="width: 600px;">
+</p>
+
+<p>
+    The image above shows four valid versions of the number $9$. The leftmost image
+    is the number $9$ with a width of $4$ squares and a height of $5$ squares. The second image
+    from the left is the number $9$ with a width of $3$ squares and a height of $9$ squares.
+    The third image from the left is the number $9$ with a width of $6$ squares and a height of $5$ squares.
+    These three numbers on the right have a thickness of $1$ square. However, the numbers need not
+    have a thickness of $1$ square. Take, for example, the rightmost number $9$. It has
+    a width of $6$ squares, a height of $10$ squares, and a thickness of $2$ squares. 
+</p>
+
+<p>
+    Pak Chanek wants the numbers to be formed elegantly. As such, there are a couple of
+    rules for placing the balloons:
+    <ol>
+        <li>Each digit must have the same width, height, and thickness.</li>
+        <li>Any two digits must be separated by at least $1$ square.</li>
+        <li>The total width of the digits, including the width of the spaces in-between digits, must be $\le R$</li>
+        <li>The height of each digit must be $\le C$.</li>
+        <li>For visibility reasons, the thickness of each digit must be less than $\frac{1}{3}$ its 
+            height and less than $\frac{1}{2}$ its width.</li>
+        <li>The total number of balloons used must be $\le N$.</li>
+        <li>$(\textrm{height} - \textrm{thickness})$ must be divisible by $2$.</li>
+        <li>The number of balloons used must be maximized.</li>
+        <li>For the numbers $2$, $3$, $4$, $5$, $6$, $8$, and $9$, the middle line
+            of each number must be placed exactly centered.
+        </li>
+    </ol>
+</p>
+
+<p>
+    The following are examples of valid and invalid balloon placements for 
+    $R = 13$ and $C = 9$:
+    <br>
+    <img alt="gambar 3 (EN)" src="render/gambar3-en.png" style="width: 600px;">
+</p>
+
+<p>
+    Help Pak Chanek by giving him a valid balloon placement configuration, or output
+    $-1$ if there are no valid configurations that satisfy all the rules above.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+    A line, consisting of three integers $R$, $C$, and $N$ — the width of the courtyard,
+    the height of the courtyard, and the number of balloons respectively.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+    If there are no valid solutions, output a line consisting of the integer $-1$.
+</p>
+
+<p>
+    Otherwise, output a line consisting of three integers, $W$, $H$, and $T$ — the width, height, and
+    the thickness of the number that satisfy all of Pak Chanek's rules. If there are multiple valid
+    solutions, output any. 
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+10 10 7
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+3 5 1
+</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+10 10 22
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+3 5 1
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+    In the two cases above, all balloons are used, as shown in the image below:
+    <br>
+    <img alt="gambar 4" src="render/gambar-4.png" style="width: 350px;">
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>$1 \le R, C \le 5\,000$</li>
+</ul>
