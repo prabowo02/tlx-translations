@@ -1,0 +1,68 @@
+<!-- Title : Shuffling Numbers  -->
+
+<h3> Description </h3>
+
+<p>
+	Mr. Chanek and Mr. Ganesh are playing with some numbers. In the beginning, Mr. Chanek and Mr. Ganesh $N$ numbers. The $i$-th number owned by Mr. Chanek is $A_i$ and the $i$-th number owned by Mr. Ganesh is $B_i$.
+</p>
+
+<p>
+  Mr. Chanek and Mr. Ganesh do not like when the same index contain the same number in both arrays. A number on an index is the same if $A_i$ = $B_i$ for some value $i$. Now Mr. Chaneks asks, if he and Mr. Ganesh shuffles the numbers they have, is there a scenario where the numbers on the same index does not exceed $K$.
+</p>
+
+<h3> Input Format </h3>
+
+<p>
+  The first line consists of two integers $N$ and $K$.
+  The second line consists of $N$ integers, representing the array Mr. Chanek has.
+  The third line consists of $N$ integers, representing the array Mr. Ganesh has.
+</p>
+
+<h3> Output Format </h3>
+
+<p> 
+  Output "Ya" (without quotation) if there is a possible scenario and "Tidak" (without quotation) if not.
+  "Ya" is "Yes" in Indonesian, and "Tidak" is "No" in Indonesian.
+</p>
+
+
+<h3> Sample Input 1 </h3>
+
+<pre>
+4 1
+1 2 3 3
+1 3 3 3
+</pre>
+
+<h3> Sample Output 1 </h3>
+
+<pre>
+Ya
+</pre>
+
+<h3> Sample Input 2 </h3>
+
+<pre>
+4 0
+1 2 3 3
+1 3 3 3
+</pre>
+
+<h3> Sample Output 2 </h3>
+
+<pre>
+Tidak
+</pre>
+
+<h3> Explanation </h3>
+
+<p>
+  For subtask 1, one of the valid scenario is, $A = [1, 3, 3, 2]$ and $B = [3, 1, 3, 3]$ It can be observed that there is only one number that is in the same position. For subtask 2, it can be proven that there is at least one number that is in the same position.
+</p>
+
+<h3> Constraints </h3>
+<ul>
+	<li> $1 \le N \le 100\,000$ </li>
+  <li> $0 \le k \le N$ </li>
+  <li> $1 \le A_i, B_i \le 100\,000$ for $1 \le i \le N$ </li>
+</ul>
