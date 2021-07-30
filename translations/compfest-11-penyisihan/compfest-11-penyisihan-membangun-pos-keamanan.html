@@ -1,0 +1,60 @@
+<!-- Title : Building Security Posts -->
+
+<h3> Description </h3>
+
+<p>
+	Chanek is a country consisting of $N$ cities and $M$ roads. Uniquely, every city in Chanek is connected with $\textbf{exactly two}$ other cities.
+</p>
+
+<p>
+	Mr. Chanek, the president of Chanek, wants to build as many security posts as possible. A post will be located in one of the city in Chanek. This post will guard the roads connected to the city where the post is built. However, Mr. Chanek do not want any road to be guarded by two posts as this may cause dispute between the two posts.
+</p>
+
+<p>
+	Help Mr. Chanek to determine how many security posts that can be built.
+</p>
+
+
+<h3> Input Format </h3>
+
+<p>
+	The first line consists of two integers $N$ and $M$ representing the number of cities and the number of roads in Chanek, respectively.
+</p>
+
+<p>
+	The following $M$ lines consists of two integers $U_i$ and $V_i$ representing the road connecting city $U_i$ and $V_i$
+</p>
+
+
+<h3> Output Format </h3>
+
+<p> 
+	An integer representing the number of security posts that Mr. Chanek can build.
+</p>
+
+
+<h3> Sample Input </h3>
+
+<pre>
+5 5
+1 2
+2 3
+3 5
+5 4
+4 1
+</pre>
+
+<h3> Sample Output </h3>
+
+<pre>
+2
+</pre>
+
+
+<h3> Constraints </h3>
+<ul>
+	<li> $3 \le N, M \le 100\,000$ </li>
+	<li> $1 \le U_i, V_i \le N$ for $1 \le i \le M$ </li>
+	<li> $U_i \neq V_i$ for $1 \le i \le M$ </li>
+	<li> No two cities are connected by more than one road. </li>
+</ul>
