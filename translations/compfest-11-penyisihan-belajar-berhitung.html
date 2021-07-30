@@ -1,0 +1,95 @@
+
+<!-- Title : Learning to Count -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek is a math teacher. Today, he is teaching $N$ students to count. Sequentially from the first student, Pak Chanek will give the $i$-th student 
+  an interval of numbers $[L_i, R_i]$. The students will then take turns (from the first student to the $N$-th student) to mention 
+  all numbers on the interval $[L_i, R_i]$ that has not been mentioned by a previous student. For example, say the first student
+  gets interval $[2, 5]$. Then, if the second student gets interval $[1, 6]$, they will only mention $1$ and $6$,
+  because all numbers from $2$ to $5$ have been mentioned by the first student.
+</p>
+
+<p>
+  After all of Pak Chanek's students have mentioned the numbers, 
+  Pak Chanek wonders what is the sum of all the numbers that his students mentioned.
+  Help Pak Chanek satisfy his curiosity!
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of a single integer $N$ — the number of Pak Chanek's students.
+</p>
+
+<p>
+  The next $N$ lines contain two integers $L_i$ and $R_i$ — the interval that the $i$-th student receives from Pak Chanek.
+</p>
+
+
+<h3>Output Format</h3>
+
+<p>
+  An integer, the sum of all numbers that Pak Chanek's students mentioned.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+2
+3 5
+4 6
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+18
+</pre>
+
+
+<h3>Constraints</h3>
+
+<!-- SENIOR ONLY !-->
+<ul>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>$1 \le L_i \le R_i \le 10^9$</li>
+</ul>
+<!-- SENIOR ONLY !-->
+
+<!-- JUNIOR ONLY !-->
+<p>For all subtasks:</p>
+<ul>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>$1 \le L_i \le R_i \le 10^9$</li>
+</ul>
+
+<h4>Subtask 1 (16 points)</h4>
+<ul>
+    <li>$1 \le N \le 1\,000$</li>
+    <li>$1 \le L_i \le R_i \le 1\,000$</li>
+</ul>
+
+<h4>Subtask 2 (29 points)</h4>
+<ul>
+    <li>$1 \le N \le 1\,000$</li>
+</ul>
+
+<h4>Subtask 3 (14 points)</h4>
+<ul>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>No $j$ exists such that $L_i \le L_j \le R_i$ for $1 \le i \le N$</li>
+</ul>
+
+<h4>Subtask 4 (20 points)</h4>
+<ul>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>$1 \le L_i \le R_i \le 100\,000$</li>
+</ul>
+
+<h4>Subtask 5 (21 points)</h4>
+<ul>
+    <li>No additional constraints.</li>
+</ul>
+<!-- JUNIOR ONLY !-->
