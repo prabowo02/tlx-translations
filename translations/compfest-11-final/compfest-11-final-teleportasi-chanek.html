@@ -1,0 +1,171 @@
+<!-- Title : Teleporting Chanek -->
+
+<h3>Description</h3>
+
+<p>
+  Comp11 is a young nation that has $N$ cities numbered from $1$ to $N$. As far as Pak Chanek knows, Comp11 doesn't have any intercity
+  transportation, except for trains.
+</p>
+
+<p>
+  Pak Chanek is visiting his mom who is located in city $N$. He has just landed in Comp11's capital city airport, which is in city $1$.
+  He is planning to continue his journey to city $N$ with minimum cost. As such, Pak Chanek rushes to the city train station using the
+  free city bus. 
+</p>
+
+<p>
+  Once he reached the station, Pak Chanek runs to the intercity train route information board. On that board, all train routes in Comp11
+  are displayed. The $i$-th train route connects city $U_i$ and city $V_i$, with a ticket price of $H_i$ each time Pak Chanek uses the $i$-th route. 
+  Each route is displayed exactly once with $U_i < V_i$. Note that each train route is two-way. Also, note that there is always 
+  a way to visit any city from any other city in Comp11 by using only the train system.
+</p>
+
+<p>
+  Hold on... Pak Chanek sees a weird information board next to the train route board. As it turns out, Comp11 has a new intercity
+  transport system, the teleportation machine. On that board, there is a list of teleportation machine types available in each city,
+  along with the price to use each type of teleportation machine.
+</p>
+
+<p>
+    Pak Chanek can teleport from city $i$ to city $j$ using machine type $k$ if city $i$ and city $j$ both have machine type $k$.
+    To teleport using machine type $k$, Pak Chanek will need to pay $P_k$ each time he uses machine type $k$.
+</p>
+
+<p>
+    Luckily, each teleportation machine is located at the train station of each city and each city has exactly one station. Thus, there
+    is no need to pay additional fees to move between teleportation machines, or from a train to a teleportation machine and vice versa. 
+</p>
+
+<p>
+    Given the list of train routes with its ticket prices, the list of teleportation machines owned by each city, and the list
+    of fees required to use each type of teleportation machine, determine the minimum cost that is needed for Pak Chanek to move
+    from city $1$ to city $N$.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of three integers $N$, $M$, and $K$. $N$ is the number of cities in Comp11, $M$ is the number of
+  intercity train routes in Comp11, and $K$ is the number of teleportation machine types in Comp11.
+</p>
+
+<p>
+  Line $2$ to line $(M + 1)$ each consists of three integers $U_i$, $V_i$, and $H_i$, representing a two-way train route connecting
+  city $U_i$ and city $V_i$ with a ticket price of $H_i$. It is guaranteed each pair of $(U_i, V_i)$ is unique and there is always 
+  a way to visit any city from any other city in Comp11 by using only the train system.
+</p>
+
+<p>
+  Line $(M + 2)$ to line $(M + N + 1)$ describes the teleporation machine types available in each city. The $(M+i+1)$-th (for $1 \le i \le N$) line 
+  starts with an integer $T_i$, followed by $T_i$ space-seperated integers $C_{i, j}$. $T_i$ represents the number of teleportation
+  machine types available in city $i$. $C_{i, j}$ represent the types of teleportation machines available in city $i$.
+  It is guaranteed that for all $i$, the values of $C_{i, j}$ are unique. 
+</p>
+
+<p>
+    Line $(M + N + 2)$ consists of $K$ integers $P_k$ (for $1 \le k \le K$). $P_k$ represents the fee for using teleportation machine
+    type $k$.
+</p>
+
+
+<h3>Output Format</h3>
+
+<p>
+  Output a single integer, the minimum cost that is needed for Pak Chanek to move from city $1$ to city $N$.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+5 4 5
+3 4 4
+2 4 7
+1 3 6
+2 5 3
+3 1 2 5
+3 1 3 4
+1 3
+2 1 2
+0
+19 8 10 3 5
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+18
+</pre>
+
+<h3>Explanation</h3> 
+<!-- As of the writing of this translation, the original image is not available.-->
+
+<p>
+    The following is the visualization of Comp11, based on the sample input.<br />
+    <img alt="sample input explanation" src="render/sample-1.png" />
+    <br />
+    $C$ represents the set of teleportation machine types owned by its associated city.
+</p>
+
+<p>
+    The price of each teleportation machine types is as follows:
+    <ul>
+        <li>Machine type $1$: $19$</li>
+        <li>Machine type $2$: $8$</li>
+        <li>Machine type $3$: $10$</li>
+        <li>Machine type $4$: $3$</li>
+        <li>Machine type $5$: $5$</li>
+    </ul>
+</p>
+
+<p>
+    The minimum cost to move from city $1$ to city $5$ can be acquired by:
+    <ol>
+        <li>Teleport from city $1$ to city $4$ using machine type $2$. This costs $8$ units.</li>
+        <li>Ride the train from city $4$ to city $2$. This costs $7$ units.</li>
+        <li>Ride the train from city $2$ to city $5$. This costs $3$ units.</li>
+    </ol>
+</p>
+
+<p>
+
+</p>
+
+<h3>Subtasks</h3>
+
+<p>For all subtasks:</p>
+<ul>
+    <li>$2 \le M, N \le 100\,000$</li>
+    <li>$1 \le M \le \min\left(100\,000, \frac{N (N - 1)}{2}\right)$</li>
+    <li>$0 \le K \le 100\,000$</li>
+    <li>$1 \le U_i < V_i \le N$ for $1 \le i \le M$</li>
+    <li>$1 \le H_i \le 1\,000\,000\,000$ for $1 \le i \le M$</li>
+    <li>$0 \le T_i \le \min(100\,000, K)$ for $1 \le i \le N$</li>
+    <li>The sum of $T_i$ for $1 \le i \le N$ does not exceed $100\,000$</li>
+    <li>$0 \le P_k \le 1\,000\,000\,000$ for $1 \le k \le K$</li>
+</ul>
+
+<h4>Subtask 1 (19 points)</h4>
+<ul>
+    <li>$K = 0$</li>
+</ul>
+
+<h4>Subtask 2 (21 points)</h4>
+<ul>
+    <li>The sum of $T_i$ for $1 \le i \le N$ does not exceed $300$</li>
+</ul>
+
+<h4>Subtask 3 (21 points)</h4>
+<ul>
+    <li>$P_k = 0$ for $1 \le k \le K$</li>
+</ul>
+
+<h4>Subtask 4 (29 points)</h4>
+<ul>
+    <li>$P_k = 1$ for $1 \le k \le K$</li>
+    <li>$H_i = 1$ for $1 \le i \le M$</li>
+</ul>
+
+<h4>Subtask 5 (11 points)</h4>
+<ul>
+    <li>No additional constraints</li>
+</ul>
