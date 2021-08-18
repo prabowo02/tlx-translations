@@ -1,0 +1,115 @@
+<!-- Title : Troublesome Dolphins -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek is a dolphin handler in Taman Safari Bogor (Bogor Zoo). One day, Pak Chanek's dolphins wants to 
+  eat the special fishes available only in Danau Kenanga (Kenanga River), UI. This request was asked right at 
+  the time when there was a special discount for purchasing said fishes.
+</p>
+
+<p>
+  Danau Kenanga has been divided into $N \times M$ sectors. The sector at the $i$-th row ($1 \le i \le N$) and
+  the $j$-th column ($1 \le j \le M$) is called Sector-$(i, j)$. Sector-$(1, 1)$ is located at the top-left corner
+  and Sector-$(N, M)$ is located at the bottom-rigth corner. Sector-$(i, j)$ has $A_{i, j}$ fishes in it. To keep
+  the quality of fish as evenly distributed as possible, Pak Chanek will select a rectangular area and purchase
+  all the fish in that area.
+</p>
+
+<p>
+  UI has infinitely many trucks that can be used for delivering the fish. Each truck has a maximum capacity of
+  $K$ fishes. As it is a long distance delivery, UI enforces a delivery to utilize at least $2$ trucks. Note that
+  each truck must not be empty and there must be at most $1$ truck not at full capacity. Truck fees can be very
+  expensive. Thus, Pak Chanek wants to minimize <b>the number of trucks used</b>. It doesn't matter anyways as the fish
+  will be sliced and diced once it has reached the zoo. Help Pak Chanek select a rectangular area such that the
+  shipment can be fulfilled!
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of three integers $N$, $M$, and $K$ — the number of rows, the number of columns, and
+  the maximum capacity of a truck. 
+</p>
+<p>
+  The next $N$ lines consists of $M$ integers $A_{i, j}$, where the $j$-th integer in the $i$-th row ($1 \le j 
+  \le M$ and $1 \le i \le N$) denoted the number of fishes in Sector-$(i, j)$.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  In the first line, output an integer — the minimum number of trucks required by Pak Chanek.
+</p>
+
+<p>
+  In the second line, output four integers $r_1$, $c_1$, $r_2$, and $c_2$ ($1 \le r_1 \le r_2 \le N$,
+  $1 \le c_1 \le c_2 \le M$). $(r_1, c_1)$ is the top-left corner of the rectangular area and $(r_2, c_2)$
+  is the bottom-right corner selected by Pak Chanek. It is guaranteed there is a rectangular area that allows
+  a delivery. If there are multiple areas that fulfill the requirement, output any.
+</p>
+
+
+<h3>Sample Input</h3>
+
+<pre>
+3 4 5
+4 4 3 1
+4 1 1 4
+11 2 3 2
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+2
+1 2 2 3
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+    The area selected by Pak Chanek:
+    <pre>
+    4 3
+    1 1
+    </pre>
+    The total number of fish acquired would be $4 + 3 + 1 + 1 = 9$.
+    <br/>
+    As such, the delivery will use $2$ trucks, $5$ fishes will be placed into the first truck and $4$ fishes
+    will be placed into the second truck.
+</p>
+
+<p>
+    There are other areas that satisfy the requirements. For example, <code>1 2 1 3</code> and 
+    <code>2 2 3 3</code>.
+</p>
+
+<h3>Subtasks</h3>
+
+<p>For all subtasks:</p>
+<ul>
+    <li>$1 \le N, M \le 2\,000$</li>
+    <li>$1 \le A_{i, j}, K \le 1\,000\,000\,000$</li>
+    <li>There exists at least one $i$ such that $A_i = 1$ for $1 \le i \le N$</li>
+</ul>
+
+<h4>Subtask 1 (10 points)</h4>
+<ul>
+    <li>$1 \le N, M \le 80$</li>
+</ul>
+
+<h4>Subtask 2 (26 points)</h4>
+<ul>
+    <li>$1 \le N, M \le 300$</li>
+</ul>
+
+<h4>Subtask 3 (25 points)</h4>
+<ul>
+    <li>For all $1 \le i, k \le N$ and $1 \le j, l \le M$, the equality $A_{i, j} = A_{k, l}$ is satisfied.</li>
+</ul>
+
+<h4>Subtask 4 (39 points)</h4>
+<ul>
+    <li>No additional constraints</li>
+</ul>
