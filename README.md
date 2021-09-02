@@ -32,3 +32,4 @@ Beberapa catatan yang perlu diperhatikan:
 - BNPCHS 2019 Final: [Edbert Geraldy Cangdinata](https://github.com/Berted), [Juan Carlo Vieri](https://github.com/juancarlovieri), [Maximillianus Utomo Quok](https://github.com/tzaph), [Steven Novaryo](https://github.com/stevennovaryo), [Vio Albert Ferdinand](https://github.com/VioAlbert).
 - BNPCHS 2018 Penyisihan: Edbert Geraldy Cangdinata, Juan Carlo Vieri, Vio Albert Ferdinand
 - BNPCHS 2018 Final: Steven Novaryo, Edbert Geraldy Cangdinata, Vio Albert Ferdinand
+- Compfest 2019 Penyisihan: Edbert Geraldy Cangdinata, [Andrew Kwok](https://github.com/Andrew-Kwok), Maximillianus Utomo Quok
