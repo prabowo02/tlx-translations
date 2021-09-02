@@ -1,0 +1,125 @@
+<!-- Title : Mr. Chanek the Veterinarian -->
+
+<h3>Description</h3>
+
+<p>
+	Apart from being a zoo manager, Mr. Chanek is also a reliable veterinarian. As a graduate of the Faculty of Veterinary Medicine at COMPFEST University, Mr. Chanek knows how to cure various diseases that can threaten the animals in his zoo.
+</p>
+
+<p>
+	However, knowledge alone is not enough to protect the animals from diseases. The quality of the medicine is also important in order to ensure maximum healing. Fortunately for Mr. Chanek, there is one drug store that he trusts for its quality. Every day, Mr. Chanek always comes there to buy medicine for his zoo.
+</p>
+
+<p>
+	According to the international veterinarian standard, it is known that there are $N$ types of medicinal ingredients and $N \times (N + 1) \div 2$ types of medicine concoction. Every medicine concoction can be denoted by two numbers $i$ and $j$, where $1 \le i \le j \le N$. The notation of a medicine is determined from the ingredients used to mix it. Medicine with the notation $(i, j)$ are made using ingredients $i, i+1, i+2, \dots, j-1, j$.
+</p>
+
+<p>
+	Moreover, the price of each medicine is determined by the price of its constituent ingredients. Assume the price of the $i$-th material is an integer $A[i]$. Then, the price of the medicine $(i, j)$ is $(A[i] \oplus A[i + 1] \oplus A[i + 2] \oplus \dots \oplus A[j - 1] \oplus A[j])$, where xor represents the bitwise exclusive or operator.
+</p>
+
+<p>
+	Every time he visits, Mr. Chanek will determine two numbers $X$ and $Y$. Then, Mr. Chanek will buy all medicine with the notation $(i, j)$ that fulfills $(X \le i \le j \le Y)$. Mr. Chanek always buys exactly one of each type of medicine he will buy.
+</p>
+
+<p>
+	The price of the medicinal ingredients may change at any time. As a result, Mr. Chanek is often confused in determining the total price of all the medicine he wants to buy. Help Mr. Chanek to calculate the price of the medicine he wants to buy.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+	The first line contains two integers $N$ and $Q$.
+</p>
+
+<p>
+	The second line contains $N$ integers, the value of $A[i]$.
+</p>
+
+<p>
+	The next $Q$ lines contains the description of all queries from $1$ to $N$. There are two possible formats:
+</p>
+
+<ul>
+	<li>
+		$1 X V$, means the price of the $X$-th medicinal ingredient changes to $V$.
+	</li>
+	<li>
+		$2 X Y$, means Mr. Chanek wants to buy all medicine with notation $(i, j)$ that satisfies $X \le i \le j \le Y$.
+	</li>
+</ul>
+
+<h3>Output Format</h3>
+
+<p>
+	For every type $2$ query, print a line that contains an integer representing the total price of all medicine that Mr. Dengklek bought.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+5 5
+1 2 3 4 5
+1 2 3
+2 3 5
+1 1 4
+2 2 4
+2 1 2
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+22
+21
+14
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+	Initially, the price of all medicinal ingredients is $[1, 2, 3, 4, 5]$.
+</p>
+
+<p>
+	In the first query, the price of the second medicinal ingredient changes to $3$, so the price of all medicinal ingredients now becomes $[1, 3, 3, 4, 5]$.
+</p>
+
+<p>
+	In the second query, Mr. Chanek determines $X$ and $Y$ as $(3, 5). So, Mr. Chanek will buy medicine with the notation $(3, 3)$, $(3, 4)$, $(3, 5)$, $(4, 4)$, $(4, 5)$, and $(5, 5)$. The prices of each of these medicine are $3$, $7$, $2$, $4$, $1$, and $5$. So, the total price of all medicine is $22$.
+</p>
+
+<p>
+	In the third query, the price of all medicinal ingredients becomes $[4, 3, 3, 4, 5]$.
+</p>
+
+<p>
+	In the fourth query, Mr. Chanek buys medicine with notation $(2, 2)$, $(2, 3)$, $(2, 4)$, $(3, 3)$, $(3, 4)$, and $(4, 4)$. The total price is $21$.
+</p>
+
+<p>
+	In the fifth query, the total price of all medicine bought by Mr. Chanek is $14$.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+	<li>
+		$1 \le N, Q \le 100\,000$
+	</li>
+	<li>
+		$0 \le A_i \le 1\,000\,000\,000$ for every $1 \le i \le N$
+	</li>
+	<li>
+		$1 \le X \le N$ for every query
+	</li>
+	<li>
+		$1 \le Y \le N$ for every type $2$ query
+	</li>
+	<li>
+		$X \le Y$ for every type $2$ query
+	</li>
+	<li>
+		$0 \le V \le 1\,000\,000\,000$
+	</li>
+</ul>
