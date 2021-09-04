@@ -1,0 +1,84 @@
+<!-- Title : Opening Safes -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek has a safe with $N$ letters as its password. $A_i$ shows the actual password of the safe at position $i$.
+  To open the safe, we need to make the input password to be equal to the actual password. At first, the $i$-th character
+  in the input is $B_i$.
+</p>
+
+<p>
+  The unique thing about the safe is that, to equalize the passwords, Pak Chanek can do two operations. The first operation is
+  Pak Chanek changing the character at a certain position. This operation takes 1 second. The second operation is for Pak Chanek to pick
+  two integers $i$ and $j$ such that $A_i = B_j$ and $A_j = B_i$. Then, Pak Chanek will swap the positions of the two characters in $B$ around.
+  This operation also takes $1$ second.
+</p>
+
+<p>
+    Now Pak Chanek wonders, what is the minimum time for him to open the safe?
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of an integer $T$ — the number of test cases. Each test case will be stated as follows.
+</p>
+
+<p>
+  The first line contains $N$ integers — the number of characters in the password.
+</p>
+
+<p>
+  The second line contains $N$ characters $A_i$ — the characters in the actual password.
+</p>
+
+<p>
+  The second line contains $N$ characters $B_i$ — the characters in the input password.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  For each test case, output an integer stating the minimum time required for Pak Chanek to open the safe (in seconds).
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+5
+acbab
+cccba
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+3
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+  Perform operation type 1 to position $1$, changing the character to a.
+  The input password is now accba.
+</p>
+
+<p>
+  Perform operation type 1 to position $3$, changing the character to b.
+  The input password is now acbba.
+</p>
+
+<p>
+  Perform operation type 2 with positions $4$ and $5$, swapping the two characters.
+  The input password is now acbab.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le T \le 10$</li>
+    <li>$1 \le N \le 100\,000$</li>
+    <li>The passowrd only consists of the characters 'a' - 'z'</li>
+</ul>
