@@ -1,0 +1,123 @@
+<!-- Title : Chanek's Mystery -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek is a spy. He is currently sneaking into Ferguso's base. He found a document 
+  labelled  "TOP SECRET" containing Ferguso's secret message.
+</p>
+
+<p>
+  Ferguso's message consists of $N$ distinct words. The $i$-th word in the message is $S_i$. There is also a matrix
+  $M$ of size $N \times N$, which is the "distance requirement" of the message.
+</p>
+
+<p>
+  $M_{i, j}$ is defined as follows:
+  <ul>
+      <li>For $i = j$, then $M_{i, j} = 0$.</li>
+      <li>For $|i - j| = 1$, then $M_{i, j}$ is the number of positions such that the characters in $S_i$ and $S_j$ 
+          are different, added by the length difference of the two words. For example, the distance between "balon"
+          and "galon" is $1$ and the distance between "bcd" and "abcd" is $4$. 
+      </li>
+      <li>For $|i - j| > 1$, if $i < j$, then 
+          $M_{i, j} = M_{i, i + 1} + M_{i + 1, i + 2} + \dots + M_{j - 2, j - 1} + M_{j - 1, j}$.
+          If $i > j$, then $M_{i, j} = M_{j, i}$. 
+      </li>
+  </ul>
+</p>
+
+<p>
+  Ferguso is a cunning individual. After reading the secret message that satisfies the condition above, Ferguso will
+  shuffle around the positions of the words in $S$ and build a new matrix. The new message and matrix will be called
+  $S'$ and $M'$ respectively. Define $P_k$ as the original position of the $k$-th character in $S'$. 
+  Thus, $M'_{i, j} = M_{P_i, P_j}$ for all $1 \le i, j \le N$. 
+</p>
+
+<p>
+  Pak Chanek is now puzzles as the document he found contains $S'$ and $M'$. Help Pak Chanek find the original message
+  or determine if that document is a false lead. A document is said to be a false lead if there are no permutations
+  of $S'$ that satisfies the three conditions above.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of an integer $N$ — the number of words in the document found by Pak Chanek.
+</p>
+
+<p>
+  The next line contains $N$ strings — the words in the shuffled message, or $S'$.
+</p>
+
+<p>
+  The next $N$ lines each consists of $N$ integers. The $j$-th integer in the $i$-th line is $M'_{i, j}$.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  There are two possible outputs:
+  <ul>
+      <li>If there is a permutation of the shuffled words that satisfied the three conditions given, output
+          that permutation which each word seperated by a space. If there are multiple solutions, output any.
+      </li>
+      <li>If there are no solutions, output "Aku sudah menyangka tidak akan semudah ini Ferguso" (meaning 
+          "I expected it wouldn't be this easy, Ferguso." in Indonesian) without quotes.
+      </li>
+  </ul>
+</p>
+
+
+<h3>Sample Input</h3>
+
+<pre>
+10
+konspirasi adalah untuk menipu pendaratan elit bulan di global dunia
+0 10 21 27 31 10 16 21 15 31
+10 0 31 37 21 20 6 11 25 41
+21 31 0 6 52 11 37 42 6 10
+27 37 6 0 58 17 43 48 12 4
+31 21 52 58 0 41 15 10 46 62
+10 20 11 17 41 0 26 31 5 21
+16 6 37 43 15 26 0 5 31 47
+21 11 42 48 10 31 5 0 36 52
+15 25 6 12 46 5 31 36 0 16
+31 41 10 4 62 21 47 52 16 0
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+pendaratan di bulan adalah konspirasi elit global untuk menipu dunia
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+    Calculating distance between "di" and "adalah" in $S$:
+    <ul>
+        <li>$M_{2, 3} = 5$. Distance between "di" and "bulan"</li>
+        <li>$M_{3, 4} = 6$. Distance between "bulan" and "adalah"</li>
+    </ul>
+    Thus, $M_{2, 4} = 5 + 6 = 11$.
+</p>
+
+<p>
+    In $S'$, "di" is in the $8$th position and "adalah" is in the $2$nd position. Hence,
+    $P_8 = 2$ and $P_2 = 4$. Thus, $M'_{8, 2} = 11$. 
+</p>
+
+<p>
+  It can be shown that the $S$ above satisfies all other conditions of the matrix.
+</p>
+
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le N \le 1\,000$</li>
+    <li>Each word is unique, consists of only the characters 'a' to 'z', and the 
+        length of the word is at most $1\,000$.
+    </li>
+    <li>$0 \le M_{i, j} \le 1 \, 000 \, 000$</li>
+</ul>
