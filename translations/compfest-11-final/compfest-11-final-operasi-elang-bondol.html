@@ -1,0 +1,142 @@
+<!-- Title : Operation Bondol Eagle -->
+
+<head>
+    <script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+        fontCache: 'global'
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<h3>Description</h3>
+
+<p>
+    Once upon a time, there was a mighty and brave king named Raja Dengklek.
+    Due to his infinite wisdom, Kerajaan Dengklek became a prosperous
+    nation, rivaling other kingdoms. Raja Dengklek is very proud of his
+    achievement. However, he still wants to accomplish one more achievement,
+    so he will be memorialized for all eternity. In the end, he decided
+    to expand his kingdom. To do so, he will conquer Kerajaan Bondol,
+    the neighboring kingdom.
+</p>
+
+<p>
+    Kerajaan Bondol consists of $N$ cities numbered from $1$ to $N$.
+    The cities are connected with $M$ <b>one-way roads</b>. City $1$ is 
+    the capital city of Kerajaan Bondol. <b>It is guaranteed that every
+    other city that isn't city $1$, there is a route from that city to
+    the capital city (city $1$).</b>
+</p>
+
+<p>
+    Raja Dengklek knows that to conquer a nation, he needs to take over
+    the capital city and all other cities will submit soon after. Using
+    that strategy, Raja Dengklek dispatched two of his best governors:
+    Pak Chanek and Pak Ganesh. Their mission is one: To lead Raja Dengklek's
+    army into Kerajaan Bondol's capital city.
+</p>
+
+<p>
+    To complete his mission, Raja Dengklek will also send in $K$ army 
+    battalions, numbered from $1$ to $K$. The $i$-th battalion has been
+    deployed into city $A_i$. The battalion deployment is not unique.
+    Thus, there could be two or more battalions that are deployed in the
+    same city. A battalion can move from its current city to another city
+    iff there is a one-way road connecting the two cities.
+</p>
+
+<p>
+    Pak Chanek and Pak Ganesh will alternatingly give commands to their soldiers,
+    starting from Pak Chanek. Each turn, a governor can command <b>exactly one</b>
+    battalion to move from its current city to another city that is directly
+    connected to its current city. Because Raja Dengklek wants to finish the 
+    war as fast as possible, a governor must give a command each turn they get.
+    The war is said to be over if at least one battalion has reached the capital
+    city.
+</p>
+
+<p>
+    Pak Chanek and Pak Ganesh are both smart and loyal governors. However, both
+    of them thirst to be renowned. Thus, both Pak Chanek and Pak Ganesh want to be
+    the first person to reach the capital city. They will try to make their rival
+    not be the first to send the army into city $1$.
+</p>
+
+<p>
+    Pak Chanek is pretty sure that he will be able to defeat Pak Ganesh. However,
+    to guarantee his victory, Pak Chanek asks for your help to direct the army
+    such that Pak Chanek will be the first to reach the capital.
+</p>
+
+<p>
+    You are asked whether Pak Chanek will win this game or not.
+</p>
+
+<h3>Input Format</h3>
+
+<p>The standard input will contain these values:</p>
+<ul>
+    <li>In the first line, there are three integers $N$, $M$, and $K$ — the number
+        of cities in Kerajaan Bondol, the number of roads in Kerajaan Bondol, and
+        the number of Raja Dengklek's battalions respectively.
+    </li>
+    <li>The next $M$ lines consist of a pair of integers $U_i$ and $V_i$, denoting
+        a one-way road from $U$ to $V$.
+    </li>
+    <li>The last line consists of $K$ space-separated integers: 
+        $A_1, A_2, A_3, \dots, A_K$. $A_i$ is the starting position of the $i$-th
+        battalion. 
+    </li>
+</ul>
+
+<h3>Output Format</h3>
+
+<p>
+    Output <code>Chanek</code> if Pak Chanek can successfully win this game. Output
+    <code>Ganesh</code> if Pak Chanek can't possibly win this game.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+7 10 3
+2 1
+3 2
+4 3
+4 2
+5 4
+6 4
+6 5
+7 6
+7 5
+7 4
+4 6 5
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+Chanek
+</pre>
+
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le N, M, K \le 100\,000$</li>
+    <li>$2 \le A_i \le N$, for all $1 \le i \le K$</li>
+    <li>$N - 1 \le M$</li>
+    <li>It is guaranteed for $i > 1$, the battalion in city $i$ can reach
+        city $1$ using one or more roads.
+    </li>
+    <li>It is guaranteed that the roads that connect the cities do not
+        form a <b>cycle</b>.
+    </li>
+</ul>
