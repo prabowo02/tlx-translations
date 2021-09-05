@@ -1,0 +1,131 @@
+<!-- Title : Mad Rat Disease -->
+
+<head>
+    <script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+        fontCache: 'global'
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+
+<h3>Description</h3>
+
+<p>
+    Pak Chanek has a field that is $1000 \times 1000$ squares wide. Currently, there is a 
+    mad rat disease plague and it is predicted that they will attack Pak Chanek's field tomorrow.
+    There are at most $N$ mad rats. The $i$-th mad rat has a $50\%$ chance of attacking
+    square $(X_i, Y_i)$. The $i$-th mad rat could only attack square $(X_i, Y_i)$. 
+</p>
+
+<p>
+    Pak Chanek asks help from his friend, Luffy, to face the mad rats. The mad rats will only
+    appear together at some time. When the mad rats appear, Luffy will shape his hand to form 
+    <b>the smallest rectangle</b> that can hit all the rats at once. However, not all mad rats
+    that are recorded will appear. It is possible that only a couple of them shows up to attack
+    Pak Chanek's field. Obviously, Luffy will adapt the shape of his hand according to which
+    rats are attacking.
+</p>
+
+<p>
+    Because there are many different possibilities of rats attacking, determine the 
+    <b>expected value</b> of the area that Luffy's hand will be shaped into to hit all the rats. 
+    It can be shown that the <b>expected value</b> can always be represented in $\frac{P}{Q}$ such 
+    that $P$ and $Q$ are integers and $\text{GCD}(P, Q) = 1$. 
+    As such, output $(P \times Q^{-1}) \bmod 1\,000\,000\,007$.
+</p>
+
+<h3>Input Format</h3>
+
+<p>The first line contains an integer $T$ — the number of test cases.</p>
+
+<p>
+For each test case: <br>
+<ul>
+    <li>The first line consists of an integer $N$ — the maximum 
+        number of mad rats that could appear</li>
+    <li>The next $N$ lines each contains two integers $X_i$ and $Y_i$ — 
+        the square that will be attacked by the $i$-th mad rat if it
+        appears.
+    </li>
+</ul>
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+    Output an integer, the result of $(P \times Q^{-1}) \bmod 1\,000\,000\,007$,
+    with $\frac{P}{Q}$ being the <em>expected value</em> of the area of Luffy's
+    hand and $A^{-1} \bmod B$ is the inverse of $A$ in $\bmod B$.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+3
+1 1
+2 3
+1 5
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+750000009
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+There are 8 different possible mad rat appearances:
+<ul>
+    <li>No rats appear, Luffy's hand area is $0$.</li>
+    <li>The rats appear only in square $(1, 1)$, 
+        Luffy's hand area is $1$.</li>
+    <li>The rats appear only in square $(2, 3)$,
+        Luffy's hand area is $1$.
+    </li>
+    <li>The rats appear only in square $(1, 5)$,
+        Luffy's hand area is $1$.
+    </li>
+    <li>
+        The rats appear in squares $(1, 1)$ and $(2, 3)$,
+        Luffy's hand area is $6$.
+    </li>
+    <li>
+        The rats appear in squares $(1, 1)$ and $(1, 5)$,
+        Luffy's hand area is $5$.
+    </li>
+    <li>
+        The rats appear in squares $(2, 3)$ and $(1, 5)$,
+        Luffy's hand area is $6$.
+    </li>
+    <li>
+        The rats appear in squares $(1, 1)$, $(1, 5)$, and $(2, 3)$,
+        Luffy's hand area is $10$.
+    </li>
+</ul>
+</p>
+
+<p>
+    Because each event has the same probability of happening, the 
+    <em>expected value</em> is $\frac{0 + 1 + 1 + 1 + 6 + 5 + 6 + 10}{8} = \frac{15}{4}$.
+    The output should thus be $(15 \times 4^{-1}) \bmod 1\,000\,000\,007 = 750\,000\,009$.
+</p>
+    
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le T \le 8$</li>
+    <li>$1 \le N \le 200\,000$</li>
+    <li>$1 \le X_i, Y_i \le 1\,000$</li>
+    <li>$X_i \neq X_j$ or $Y_i \neq Y_j$ for all $i \neq j$</li>
+</ul>
