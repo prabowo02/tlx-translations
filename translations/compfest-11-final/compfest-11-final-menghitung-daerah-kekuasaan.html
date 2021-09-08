@@ -1,0 +1,101 @@
+<!-- Title : Measuring Territories -->
+
+<h3>Description</h3>
+
+<p>
+    Pak Chanek just arrived in an uninhabited island. This island is an $N \times M$
+    rectangle. The top left corner is square $(1, 1)$ and the bottom right corner is 
+    square $(N, M)$.
+</p>
+
+<p>
+    Because it is an uninhabited island, Pak Chanek wants to develop territories on that
+    island. At first, Pak Chanek has no territories in that island.
+</p>
+
+<p>
+    Pak Chanek will then perform $Q$ operations of three types, which are:
+    <ul>
+        <li>Operation type $1$, Pak Chanek will develop a territory on all squares that are located on
+            row $X$. It is guaranteed that there weren't any type $1$ operation in 
+            row $X$ before.
+        </li>
+        <li>Operation type $2$, Pak Chanek will develop a territory on all squares that are located on
+            column $X$. It is guaranteed that there weren't any type $2$ operation in 
+            column $X$ before.
+        </li>
+        <li>Operation type $3$, Pak Chanek will give two coordinates $(x_1, y_1)$ and $(x_2, y_2)$. 
+            Calculate how many squares that are Pak Chanek's territory within the rectangular area
+            formed by the square $(x_1, y_1)$ and square $(x_2, y_2)$.
+        </li>
+    </ul>
+</p>
+
+<p>
+    Help Pak Chanek answer every type $3$ operation!
+</p>
+
+<h3>Input Format</h3>
+
+<p>The first line contains an integer $T$ — the number of test cases.
+   Each test case is stated as follows.
+</p>
+
+<p>
+  The first line consists of three integers $N$, $M$, $Q$ — the size of
+  the island and the number of Pak Chanek's questions respectively.
+</p>
+
+<p>
+  The next $Q$ lines will be of the following format:
+  <ul>
+      <li>If the line is of operation type $1$, it will contain two integers $A$ and $X$.
+          It is guaranteed that $A = 1$.
+      </li>
+      <li>If the line is of operation type $2$, it will contain two integers $A$ and $X$.
+        It is guaranteed that $A = 2$.
+    </li>
+    <li>If the line is of operation type $3$, it will contain five integers $A$, $x_1$, $y_1$, $x_2$, and $y_2$.
+        It is guaranteed that $A = 3$.
+    </li>
+  </ul>
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+    For each operation type $3$, output an integer representing
+    the answer of operation type $3$.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+1
+4 5 7
+1 2
+2 3
+3 1 1 3 3
+3 1 1 1 1
+1 3
+2 4
+3 1 1 4 5
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+5
+0
+14
+</pre>
+    
+<h3>Constraints</h3>
+
+<ul>
+    <li>$1 \le T \le 3$</li>
+    <li>$1 \le N, M \le 1\,000\,000\,000$</li>
+    <li>$1 \le Q \le 100\,000$</li>
+    <li>$1 \le x_1, x_2 \le N$</li>
+    <li>$1 \le y_1, y_2 \le M$</li>
+</ul>
