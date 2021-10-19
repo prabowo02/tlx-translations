@@ -1,0 +1,127 @@
+<!-- Title : XOR Challenge -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek is teaching Chaneka the <b>bitwise</b> XOR ($\oplus$) operation for integers.
+</p>
+
+<p>
+  Now, Pak Chanek gives a challenge to Chaneka. Pak Chanek has an array $A$ of size $N$, indexed
+  from $1$ to $N$. At first, all elements in that array is $0$ (empty). Pak Chanek will then perform $Q$
+  operations $u_i$ $v_i$ $x_i$, for $1 \le i \le Q$, consecutively on that array. The operation
+  $u_i$ $v_i$ $x_i$ is defined is modifying the value of $A[u_i]$ to $A[u_i] \oplus x_i$ and
+  $A[v_i]$ to $A[v_i] \oplus x_i$.
+</p>
+
+<p>
+  After performing all operations, Pak Chanek gives that array to Chaneka. Now, Chaneka is asked
+  to empty the array using the same $u_j$ $v_j$ $x_j$ operations, for $j \ge 1$, with the condition
+  that the number of operations must be minimized. The operations doesn't have to be the same
+  as those performed by Pak Chanek. In other words, Chaneka is allowed to decide their own
+  operations.
+</p>
+
+<p>
+  Chaneka wants to complete this challenge by themselves. However, they are unsure if the number
+  of operations they have performed is minimal. Thus, to help Chaneka, write a program that
+  calculates the minimum number of operations required to complete the challenge.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of two integers $N$ and $Q$ — the size of the array and number of
+  operations performed by Pak Chanek.
+</p>
+
+<p>
+  The next $Q$ lines consists of three integers $u_i$, $v_i$, and $x_i$ — the operations
+  performed by Pak Chanek.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  Output an integer that states the minimum operations required by Chaneka to complete Pak
+  Chanek's challenge.
+</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+5 5
+1 3 1
+2 3 2
+3 4 3
+2 3 3
+3 5 4
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>
+3
+</pre>
+
+<h3>Explanation</h3>
+
+<p>
+    At first, $A = [0, 0, 0, 0, 0]$.
+    <ul>
+        <li>After operation $1$ $3$ $1$, $A = [1, 0, 1, 0, 0]$.</li>
+        <li>After operation $2$ $3$ $2$, $A = [1, 2, 3, 0, 0]$.</li>
+        <li>After operation $3$ $4$ $3$, $A = [1, 2, 0, 3, 0]$.</li>
+        <li>After operation $2$ $3$ $3$, $A = [1, 1, 3, 3, 0]$.</li>
+        <li>After operation $3$ $5$ $4$, $A = [1, 1, 7, 3, 4]$.</li>
+    </ul>
+</p>
+
+<p>
+    To empty this array, Chaneka only needs to perform $3$ operations.
+    One such possibility for these three operations are
+    <ul>
+        <li>Perform operation $1$ $2$ $1$, thus $A$ is now $[0, 0, 7, 3, 4]$.</li>
+        <li>Perform operation $3$ $4$ $3$, thus $A$ is now $[0, 0, 4, 0, 4]$.</li>
+        <li>Perform operation $3$ $5$ $4$, thus $A$ is now $[0, 0, 0, 0, 0]$.</li>
+    </ul>
+</p>
+
+<p>
+    There are no solutions that empties the array $A$ with less operations.
+</p>
+
+<h3>Subtasks</h3>
+
+<p>For all subtasks:</p>
+<ul>
+    <li>$1 \le N \le 20$</li>
+    <li>$1 \le Q \le 100\,000$</li>
+    <li>$1 \le u_i, v_i, u_j, v_j \le N$</li>
+    <li>$0 \le x_i, x_j < 2^{60}$</li>
+</ul>
+
+<h4>Subtask 1 (16 points)</h4>
+<ul>
+    <li>$1 \le N \le 7$</li>
+</ul>
+
+<h4>Subtask 2 (18 points)</h4>
+<ul>
+    <li>$1 \le N \le 10$</li>
+</ul>
+
+<h4>Subtask 3 (12 points)</h4>
+<ul>
+    <li>$0 \le x_i, x_j \le 1$</li>
+</ul>
+
+<h4>Subtask 4 (20 points)</h4>
+<ul>
+    <li>$1 \le N \le 15$</li>
+</ul>
+
+<h4>Subtask 5 (34 points)</h4>
+<ul>
+    <li>No additional constraints</li>
+</ul>
