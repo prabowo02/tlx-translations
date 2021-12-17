@@ -1,0 +1,118 @@
+<!-- Title : Chanek Trains -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek is the owner of the Chanek Trains corporation. A Chanek Train is represented as a string of length $N$
+  consisting of either seats or doors at each point. If the $i$-th character is $0$, then the $i$-th position is a door.
+  Otherwise if the $i$-th character is $1$, then the $i$-th position is a seat.
+</p>
+
+<p>
+  Pak Chanek now wants to place the passengers inside his train. Each passenger must sit in exactly one seat and each seat
+  can only be sit on by at most one passenger. The time required for a passenger to move from the $i$-th position to the
+  $j$-th position is $|i - j|$ second(s). At each second, a door can serve at most one passenger. Passengers are already
+  in front of all the doors at the $0$-th second.
+</p>
+
+<p>
+  Pak Chanek now wonders, what is the minimum time required in seconds such that all seats in Pak Chanek's train is taken
+  if we assume there are infinitely many passengers waiting in front of each door.
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of an integer $N$ — the length of the Chanek Train.
+</p>
+<p>
+  The second line consists of $N$ characters $A_i$ — the configuration of the Chanek Train.
+</p>
+
+<h3>Output Format</h3>
+
+<p>
+  Output a single integer, the minimum time required in seconds.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+5
+11011
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+4
+</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+10
+1001110111
+</pre>
+
+<h3>Sample Output 2</h3>
+
+<pre>
+3
+</pre>
+
+<h3>Explanation</h3> 
+<!-- As of the writing of this translation, the original image is not available.-->
+
+<p>
+    For the first sample, the following sequence of evens would result in minimum time:
+    <ul>
+        <li>At second $0$, passenger $1$ is at position $3$</li>
+        <li>At second $1$, passenger $1$ moves to position $4$, passenger $2$ is at position $3$</li>
+        <li>At second $2$, passenger $1$ moves to position $5$ and sits there, passenger $2$ moves to position $4$ and sits there.
+             Passenger $3$ is at position $3$.
+        </li>
+        <li>At second $3$, passenger $3$ moves to position $2$, passenger $4$ is at position $3$</li>
+        <li>At second $4$, passenger $3$ moves to position $1$ and sits there, passenger $4$ moves to position $3$ and sits there</li>
+    </ul>
+</p>
+
+<p>
+    All seats have been filled in 4 seconds, the minimum time. It can be proven that there is no sequence of events
+    that results in a lower resulting time.
+</p>
+
+<h3>Subtasks</h3>
+
+<p>For all subtasks:</p>
+<ul>
+    <li>$2 \le N \le 1\,000\,000$</li>
+    <li>$A_i$ can only be $0$ or $1$ for $1 \le i \le N$</li>
+    <li>There exists at least one $i$ such that $A_i = 1$ for $1 \le i \le N$</li>
+    <li>There exists at least one $i$ such that $A_i = 0$ for $1 \le i \le N$</li>
+</ul>
+
+<h4>Subtask 1 (21 points)</h4>
+<ul>
+    <li>$2 \le N \le 100$</li>
+</ul>
+
+<h4>Subtask 2 (29 points)</h4>
+<ul>
+    <li>$2 \le N \le 2\,000$</li>
+</ul>
+
+<h4>Subtask 3 (9 points)</h4>
+<ul>
+    <li>There is exactly one $i$ such that $A_i = 0$ for $1 \le i \le N$</li>
+</ul>
+
+<h4>Subtask 4 (9 points)</h4>
+<ul>
+    <li>There exists exactly two $i$ such that $A_i = 0$, which is at $i = 1$ and $i = N$.</li>
+</ul>
+
+<h4>Subtask 5 (32 points)</h4>
+<ul>
+    <li>No additional constraints</li>
+</ul>
