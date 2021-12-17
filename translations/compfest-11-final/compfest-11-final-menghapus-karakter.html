@@ -1,0 +1,78 @@
+<!-- Title : Erasing Characters -->
+
+<h3>Description</h3>
+
+<p>
+  Pak Chanek has a word that consists of lowercase alphabets. He got bored and decided to erase some characters.
+  Pak Chanek will start by finding the alphabetically smallest character in that word, then he will erase it.
+  Pak Chanek will do this operation multiple times. Now he wonders, in the $K$-th erasure operation, what
+  character did he erase?
+</p>
+
+<h3>Input Format</h3>
+
+<p>
+  The first line consists of two integers $N$ and $K$ — the length of the word and the $K$-th erasure operation
+  respectively.
+</p>
+
+<p>
+    The second line contains a string of length $N$, consisting of only lowercase alphabet characters. 
+    This string is Pak Chanek's word.
+</p>
+
+
+<h3>Output Format</h3>
+
+<p>
+  Output a single integer, the character that is erased in the $K$-th erasure operation.
+</p>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+5 3
+aabcc
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+b
+</pre>
+
+<h3>Sample Input 1</h3>
+
+<pre>
+5 4
+aabcc
+</pre>
+
+<h3>Sample Output 1</h3>
+
+<pre>
+c
+</pre>
+
+<h3>Subtasks</h3>
+
+<p>For all subtasks:</p>
+<ul>
+    <li>$1 \le K \le N \le 100\,000$</li>
+    <li>The word consists of only lowercase alphabet characters (<code>'a'</code> - <code>'z'</code>).</li>
+</ul>
+
+<h4>Subtask 1 (22 points)</h4>
+<ul>
+    <li>$1 \le K \le N \le 1\,000$</li>
+</ul>
+
+<h4>Subtask 2 (23 points)</h4>
+<ul>
+    <li>The word consists of only the letters <code>'a'</code>, <code>'b'</code>, or <code>'c'</code></li>
+</ul>
+
+<h4>Subtask 3 (55 points)</h4>
+<ul>
+    <li>No additional constraints</li>
+</ul>
